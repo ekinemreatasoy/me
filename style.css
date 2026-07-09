@@ -1,0 +1,130 @@
+/* ===== Paylaşılan tema — index + tüm detay şablonları bunu kullanır =====
+   Bir uygulamanın rengini değiştirmek için ilgili sayfanın <style> bloğunda
+   :root{ --accent:#XXXXXX } yaz; her şey otomatik o renge döner. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --bg:#f3efe6;
+  --ink:#18140f;
+  --muted:#6e6557;
+  --line:#ddd6c8;
+  --card:#fbf8f1;
+  --accent:#d23a1c;            /* per-sayfa override edilir */
+  --display:"Fraunces",Georgia,serif;
+  --body:"Hanken Grotesk",system-ui,sans-serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--body);
+  line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+/* grain overlay */
+body::before{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--accent);color:var(--bg)}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+
+/* ---- header ---- */
+header{position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);
+  background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand img{width:30px;height:30px;border-radius:8px}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:500}
+.nav-links a{position:relative;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1.5px;background:var(--accent);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.back{font-family:var(--mono);font-size:13px;color:var(--muted);transition:color .2s}
+.back:hover{color:var(--accent)}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;padding:13px 24px;
+  border-radius:99px;border:1px solid var(--ink);transition:transform .15s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn-ghost:hover{background:var(--ink);color:var(--bg)}
+/* App Store rozeti */
+.appstore{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:var(--bg);
+  padding:11px 22px;border-radius:14px;transition:transform .15s,box-shadow .2s}
+.appstore:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(24,20,15,.5)}
+.appstore svg{width:24px;height:24px;flex:none;fill:currentColor}
+.appstore .small{font-size:10px;line-height:1;opacity:.85;font-family:var(--mono)}
+.appstore .big{font-family:var(--display);font-size:18px;line-height:1.1;font-weight:600}
+
+/* ---- section heading ---- */
+.sec{padding:clamp(50px,9vw,100px) 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  border-top:1px solid var(--line);padding-top:22px;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,4.5vw,44px);letter-spacing:-.02em}
+
+/* ---- reveal animation ---- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.stagger .reveal{transition-delay:calc(var(--i,0) * .09s)}
+
+footer{text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted);padding:36px 0;border-top:1px solid var(--line)}
+
+/* ===== Detay sayfası bileşenleri (beybim/supkano şablonları paylaşır) ===== */
+.detail-hero{text-align:center;padding:clamp(48px,9vw,96px) 0 clamp(28px,5vw,52px)}
+.app-icon-lg{width:118px;height:118px;border-radius:28px;margin:0 auto 26px;box-shadow:0 22px 50px -18px rgba(24,20,15,.45)}
+.detail-hero .tagline{font-family:var(--display);font-weight:500;font-size:clamp(30px,5.5vw,56px);
+  line-height:1.05;letter-spacing:-.02em;max-width:18ch;margin:14px auto 0}
+.detail-hero .lead{margin:22px auto 0;font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:54ch}
+.detail-cta{margin:34px 0 8px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.rating{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.rating b{color:var(--accent)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.stats div{background:var(--bg);padding:26px 18px;text-align:center}
+.stats b{display:block;font-family:var(--display);font-size:clamp(26px,4vw,38px);font-weight:600;color:var(--accent)}
+.stats span{font-size:13px;color:var(--muted)}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;
+  transition:transform .2s,border-color .2s,box-shadow .2s}
+.feat:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 16px 36px -22px rgba(24,20,15,.4)}
+.fic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:16px;
+  background:color-mix(in srgb,var(--accent) 14%,var(--bg));border:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.feat h3{font-family:var(--display);font-weight:600;font-size:20px;margin-bottom:6px;letter-spacing:-.01em}
+.feat p{font-size:14.5px;color:var(--muted)}
+
+.shots{display:flex;gap:26px;overflow-x:auto;padding:8px 4px 22px;scroll-snap-type:x mandatory}
+.shot{scroll-snap-align:center;text-align:center;flex:none}
+.shot figcaption{margin-top:16px}
+.shot figcaption b{display:block;font-family:var(--display);font-size:17px;font-weight:600}
+.shot figcaption span{font-size:13px;color:var(--muted)}
+
+.phone{width:228px;flex:none;position:relative;border-radius:40px;background:#111;padding:9px;
+  box-shadow:0 34px 60px -30px rgba(24,20,15,.7),inset 0 0 0 2px #2c2c2c}
+.phone .screen{border-radius:32px;overflow:hidden;aspect-ratio:9/19.5;background:#000}
+.phone .screen img{width:100%;height:100%;object-fit:cover;object-position:top}
+.phone .island{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:82px;height:24px;background:#000;border-radius:99px;z-index:2}
+
+.callout{background:color-mix(in srgb,var(--accent) 8%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 22%,var(--line));
+  border-radius:22px;padding:clamp(28px,5vw,48px);text-align:center}
+.callout h2{font-family:var(--display);font-weight:500;font-size:clamp(26px,4vw,40px);letter-spacing:-.02em;margin-bottom:12px}
+.callout p{color:var(--muted);max-width:56ch;margin:0 auto}
+
+.cta-band{text-align:center;padding:clamp(50px,8vw,90px) 0}
+.cta-band h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,52px);letter-spacing:-.02em;margin-bottom:24px}
+
+@media(max-width:880px){ .features{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:620px){ .features{grid-template-columns:1fr} .stats{grid-template-columns:repeat(2,1fr)} }
+
+@media(max-width:760px){ .nav-links{display:none} }
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}

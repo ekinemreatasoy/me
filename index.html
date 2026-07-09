@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ekin Atasoy — Yazılım Geliştirici & App Maker</title>
+<meta name="description" content="Ekin Atasoy'un kişisel portföyü. Geliştirdiğim iOS uygulamaları ve projeler.">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* --- yalnızca ana sayfaya özel --- */
+  .hero{padding:clamp(60px,12vw,140px) 0 clamp(48px,8vw,90px)}
+  .status{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
+    color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 14px;margin-bottom:28px}
+  .dot{width:7px;height:7px;border-radius:50%;background:#3aab5c;animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(58,171,92,.5)}70%{box-shadow:0 0 0 8px rgba(58,171,92,0)}100%{box-shadow:0 0 0 0 rgba(58,171,92,0)}}
+  .hero h1{font-family:var(--display);font-weight:500;font-size:clamp(42px,8vw,88px);line-height:1.02;letter-spacing:-.025em;max-width:14ch}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero p{margin-top:28px;font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:52ch}
+  .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px -22px rgba(24,20,15,.4);border-color:var(--ink)}
+  .thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .thumb span{font-family:var(--display);font-size:64px;font-weight:600;color:rgba(255,255,255,.92);mix-blend-mode:overlay}
+  .app-icon{width:92px;height:92px;border-radius:22px;box-shadow:0 12px 30px -8px rgba(0,0,0,.45)}
+  .t1{background:linear-gradient(135deg,#e8642e,#c9234a)}      /* Beybim */
+  .t2{background:linear-gradient(135deg,#0090d6,#012a3c)}      /* SUPKANO */
+  .t3{background:linear-gradient(135deg,#5b54c9,#2a2356)}
+  .t4{background:linear-gradient(135deg,#d49a1f,#8a4b14)}
+  .card-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card-top{display:flex;align-items:center;justify-content:space-between}
+  .card-num{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .card h3{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-.01em}
+  .card p{font-size:15px;color:var(--muted);flex:1}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+  .tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:4px 9px}
+  .card-link{font-weight:600;font-size:14px;color:var(--accent);display:inline-flex;gap:6px;align-items:center;margin-top:6px}
+  .card-link .arr{transition:transform .2s}
+  .card:hover .card-link .arr{transform:translateX(4px)}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+  .about-grid p{font-size:clamp(17px,2vw,20px);line-height:1.7}
+  .about-grid p + p{margin-top:18px}
+  .facts{font-family:var(--mono);font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:14px}
+  .facts div{border-top:1px solid var(--line);padding-top:12px}
+  .facts strong{display:block;color:var(--ink);font-weight:700;margin-top:3px}
+
+  .contact{text-align:center;border-top:1px solid var(--line);padding:clamp(60px,10vw,120px) 0}
+  .contact h2{font-family:var(--display);font-weight:500;font-size:clamp(36px,7vw,72px);letter-spacing:-.025em;line-height:1.05}
+  .contact .mail{display:inline-block;margin-top:28px;font-size:clamp(18px,3vw,26px);font-weight:600;
+    border-bottom:2px solid var(--accent);padding-bottom:3px;transition:color .2s}
+  .contact .mail:hover{color:var(--accent)}
+  .socials{margin-top:36px;display:flex;gap:24px;justify-content:center;font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+  .socials a{color:var(--muted);transition:color .2s}
+  .socials a:hover{color:var(--accent)}
+
+  @media(max-width:760px){
+    .grid{grid-template-columns:1fr}
+    .about-grid{grid-template-columns:1fr;gap:28px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">Ekin Atasoy</a>
+    <nav class="nav-links">
+      <a href="#work">Çalışmalar</a>
+      <a href="#about">Hakkımda</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero wrap stagger">
+    <div class="status reveal" style="--i:0"><span class="dot"></span> Yeni projelere açığım</div>
+    <h1 class="reveal" style="--i:1">iOS uygulamaları <em>tasarlıyor</em> ve geliştiriyorum.</h1>
+    <p class="reveal" style="--i:2">Merhaba, ben Ekin. Kullanışlı, hızlı ve güzel ürünler kurmayı seven bir geliştiriciyim. Aşağıda yaptığım uygulamalardan bir seçki var.</p>
+    <div class="hero-cta reveal" style="--i:3">
+      <a href="#work" class="btn btn-primary">Çalışmalarımı gör</a>
+      <a href="#contact" class="btn btn-ghost">İletişime geç</a>
+    </div>
+  </section>
+
+  <!-- ===== WORK ===== -->
+  <section id="work" class="sec wrap">
+    <div class="sec-head reveal">
+      <h2>Seçili Çalışmalar</h2>
+      <span class="eyebrow">Uygulamalar & Projeler</span>
+    </div>
+
+    <div class="grid">
+      <!-- Beybim → iOS detay şablonu -->
+      <a href="beybim.html" class="card reveal">
+        <div class="thumb t1"><img class="app-icon" src="assets/beybim/icon.png" alt="Beybim uygulama ikonu"></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Beybim</h3><span class="card-num">01</span></div>
+          <p>Türkiye'ye özel anne-bebek rehberi: planlamadan ilk yaşa kadar takip, içerik ve destek tek uygulamada.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag">Sağlık</span></div>
+          <span class="card-link">İncele <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <!-- SUPKANO → web detay şablonu -->
+      <a href="supkano.html" class="card reveal">
+        <div class="thumb t2"><img class="app-icon" src="assets/supkano/logo.png" alt="SUPKANO uygulama ikonu"></div>
+        <div class="card-body">
+          <div class="card-top"><h3>SUPKANO</h3><span class="card-num">02</span></div>
+          <p>SUP ve kano tutkunları için GPS rota takibi, rota keşfi ve topluluk — suya çık, rotanı bırak.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag">Topluluk</span></div>
+          <span class="card-link">İncele <span class="arr">→</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="sec wrap">
+    <div class="sec-head reveal">
+      <h2>Hakkımda</h2>
+      <span class="eyebrow">Kim — Ne — Nasıl</span>
+    </div>
+    <div class="about-grid">
+      <div class="facts reveal">
+        <div>Konum<strong>Izmir, Türkiye</strong></div>
+        <div>Odak<strong>iOS · Mobil · Web</strong></div>
+        <div>Araçlar<strong>Swift, SwiftUI, Web</strong></div>
+        <div>Durum<strong>Freelance / İş Birliği</strong></div>
+      </div>
+      <div class="reveal">
+        <p>Fikirleri App Store'da yayınlanan ürünlere dönüştürüyorum. İlgi alanım; sade arayüzler, hızlı performans ve kullanıcının işini gerçekten kolaylaştıran detaylar.</p>
+        <p>Yeni teknolojiler denemeyi, kişisel projeler geliştirmeyi ve öğrendiklerimi paylaşmayı seviyorum. Birlikte bir şeyler yapmak istersen mesajın bir tık uzakta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact wrap">
+    <span class="eyebrow reveal">İletişim</span>
+    <h2 class="reveal" style="margin-top:18px">Hadi birlikte<br>bir şeyler yapalım.</h2>
+   
+    <a href="mailto:ekinatasoy4@gmail.com" class="mail reveal">ekinatasoy4@gmail.com</a>
+    <div class="socials reveal">
+      <a href="https://github.com/ekinemreatasoy" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/ekinemreatasoy" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Ekin Atasoy — Tüm hakları saklıdır.</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
