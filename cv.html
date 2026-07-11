@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Ekin Emre Atasoy · iOS Developer</title>
+<meta name="description" content="Ekin Emre Atasoy — iOS Developer. Deneyim, projeler, eğitim ve yetenekler. PDF olarak indir.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .cv-hero{padding:clamp(56px,10vw,110px) 0 clamp(28px,5vw,48px)}
+  .cv-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(40px,8vw,78px);letter-spacing:-.025em;line-height:1.02;margin-top:10px}
+  .cv-hero .role{margin-top:12px;font-size:clamp(17px,2.5vw,22px);color:var(--muted)}
+  .cv-contact{margin-top:22px;display:flex;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:13px}
+  .cv-contact a{color:var(--muted);border-bottom:1px solid var(--line);transition:color .2s}
+  .cv-contact a:hover{color:var(--accent)}
+  .cv-dl{margin-top:30px}
+  .lead-text{font-size:clamp(17px,2vw,20px);line-height:1.72;max-width:72ch}
+  .timeline{display:flex;flex-direction:column;gap:34px}
+  .job{border-left:2px solid var(--line);padding-left:26px;position:relative}
+  .job::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+  .job-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .job-head h3{font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:-.01em}
+  .job .when{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+  .job .where{color:var(--accent);font-weight:600;font-size:14.5px;margin:4px 0 12px}
+  .job ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .job li{position:relative;padding-left:18px;font-size:15px;color:var(--muted);line-height:1.55}
+  .job li::before{content:"–";position:absolute;left:0;color:var(--accent)}
+  .job .stack{margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--ink);opacity:.7;letter-spacing:.02em}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--mono);font-size:13px;border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--card);transition:border-color .2s,color .2s}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">Ekin Atasoy</a>
+    <a href="index.html" class="back">← Portföy</a>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="cv-hero wrap stagger">
+    <div class="reveal" style="--i:0"><span class="eyebrow">Özgeçmiş</span></div>
+    <h1 class="reveal" style="--i:1">Ekin Emre Atasoy</h1>
+    <p class="role reveal" style="--i:2">iOS Developer · İstanbul, Türkiye</p>
+    <div class="cv-contact reveal" style="--i:3">
+      <a href="mailto:ekin-atasoy@hotmail.com">ekin-atasoy@hotmail.com</a>
+      <a href="tel:+905465381997">+90 546 538 1997</a>
+      <a href="https://github.com/ekinemreatasoy" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ekinemreatasoy" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="cv-dl reveal" style="--i:4">
+      <a href="Cv/Ekin_Emre_Atasoy_CV.pdf" download class="btn btn-primary">PDF olarak indir ↓</a>
+    </div>
+  </section>
+
+  <!-- ===== SUMMARY ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2>Özet</h2><span class="eyebrow">Summary</span></div>
+    <p class="lead-text reveal">Swift, UIKit ve SwiftUI ile üretim seviyesinde mobil uygulamalar geliştiren ve ölçekleyen bir iOS geliştiricisiyim. MVVM mimarisi, asenkron programlama, çoklu iş parçacığı (multithreading) ve veri kalıcılığı konularında güçlüyüm. Bir özelliği mimari kararlardan API entegrasyonuna, performans optimizasyonundan legacy kod refaktörüne kadar uçtan uca sahiplenebiliyorum. Ölçeklenebilir, sürdürülebilir ve test edilebilir kod yazmaya odaklıyım. AB vatandaşıyım (EMEA çalışma izni), uzaktan ve uluslararası fırsatlara açığım.</p>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2>Deneyim</h2><span class="eyebrow">Experience</span></div>
+    <div class="timeline">
+      <div class="job reveal">
+        <div class="job-head"><h3>iOS Developer</h3><span class="when">Şub 2025 — May 2026</span></div>
+        <div class="where">Vero Digital Solutions OOD · Sofya (Remote)</div>
+        <ul>
+          <li>Yüksek öncelikli production hatalarını araştırıp çözdüm; uygulama kararlılığını artırıp çökme oranını düşürdüm.</li>
+          <li>Ürün gereksinimleri ve müşteri ihtiyaçlarına göre yeni özellikler geliştirip entegre ettim.</li>
+          <li>RESTful API entegrasyonları ve asenkron ağ operasyonlarını yönettim.</li>
+          <li>CoreData ve CoreStore ile yerel veri kalıcılığını yönettim.</li>
+          <li>Race condition ve UI bloklanmasını önlemek için multithreading akışlarını iyileştirdim.</li>
+          <li>Legacy kodu daha modüler ve sürdürülebilir MVVM yapısına refaktör ettim.</li>
+        </ul>
+        <div class="stack">Swift · UIKit · SwiftUI · MVVM · CoreData · CoreStore · REST API · GCD · GitLab</div>
+      </div>
+
+      <div class="job reveal">
+        <div class="job-head"><h3>Software Developer</h3><span class="when">Eki 2022 — Ara 2024</span></div>
+        <div class="where">Car4Future Technologies</div>
+        <ul>
+          <li>iOS uygulamasını sıfırdan geliştirdim (SwiftUI + UIKit): konum tabanlı istasyon arama, BLE şarj kontrolü ve ödeme entegrasyonu.</li>
+          <li>CarPlay ve Apple Watch uzantıları geliştirdim.</li>
+          <li>Firebase ile kimlik doğrulama, gerçek zamanlı veri senkronizasyonu ve analitik entegre ettim.</li>
+          <li>Şarj cihazı iletişimi için CoreBluetooth yönettim; bellek kullanımını optimize ederek %30 performans kazancı sağladım.</li>
+        </ul>
+        <div class="stack">Firebase · UIKit · Mapbox · REST API · Lottie · BLE (Bluetooth Low Energy)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2>Projeler</h2><span class="eyebrow">Projects</span></div>
+    <div class="timeline">
+      <div class="job reveal">
+        <div class="job-head"><h3>Car4Future: Smart City</h3></div>
+        <div class="where">Elektrikli araç kullanıcıları için komple bir ekosistem</div>
+        <ul>
+          <li>iOS uygulamasını sıfırdan, temiz MVVM mimarisiyle SwiftUI + UIKit kullanarak geliştirdim.</li>
+          <li>Kimlik doğrulama, konum servisleri, ödeme sistemi ve BLE yönetimi.</li>
+          <li>Apple ekosisteminde kullanımı genişletmek için CarPlay ve Apple Watch uzantıları kurup optimize ettim.</li>
+        </ul>
+        <div class="stack">Swift · UIKit · SwiftUI · Firebase · Mapbox · REST API · CoreBluetooth · CarPlay · WatchKit</div>
+      </div>
+
+      <div class="job reveal">
+        <div class="job-head"><h3>BauBuddy App</h3></div>
+        <div class="where">Vero Digital Solutions · saha ekipleri için zaman & iş emri takibi</div>
+        <ul>
+          <li>İş emri başına çalışma, seyahat ve mola süresini kaydeden sağlam zaman takibi modülleri geliştirdim.</li>
+          <li>Takip edilen saatleri işlerle ilişkilendiren proje/görev atama mantığı entegre ettim.</li>
+          <li>Çevrimdışı veri girişi ve ağ geldiğinde senkronizasyon sağladım.</li>
+          <li>MVVM ve CoreData tabanlı verimli yerel kalıcılıkla yapılandırdım.</li>
+        </ul>
+        <div class="stack">Swift · UIKit/SwiftUI · MVVM · CoreData · Offline-first senkronizasyon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2>Eğitim</h2><span class="eyebrow">Education</span></div>
+    <div class="timeline">
+      <div class="job reveal">
+        <div class="job-head"><h3>Matematik, Lisans (BSc)</h3><span class="when">2015 — 2022</span></div>
+        <div class="where">İzmir Yüksek Teknoloji Enstitüsü (IZTECH), İzmir</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2>Yetenekler</h2><span class="eyebrow">Skills</span></div>
+    <div class="chips reveal">
+      <span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">UIKit</span>
+      <span class="chip">MVVM</span><span class="chip">CoreData</span><span class="chip">CoreStore</span>
+      <span class="chip">CoreBluetooth / BLE</span><span class="chip">Firebase</span><span class="chip">REST API</span>
+      <span class="chip">Mapbox</span><span class="chip">GCD / Multithreading</span><span class="chip">CarPlay</span>
+      <span class="chip">WatchKit</span><span class="chip">Lottie</span><span class="chip">Git / GitLab</span>
+      <span class="chip">Offline-first</span>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-band wrap">
+    <h2 class="reveal">Birlikte çalışalım mı?</h2>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="Cv/Ekin_Emre_Atasoy_CV.pdf" download class="btn btn-primary">CV'yi indir ↓</a>
+      <a href="mailto:ekin-atasoy@hotmail.com" class="btn btn-ghost">E-posta gönder</a>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Ekin Atasoy · <a href="index.html" style="color:var(--accent)">Portföye dön</a></footer>
+<script src="app.js"></script>
+</body>
+</html>
