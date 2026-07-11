@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ekin Atasoy — Yazılım Geliştirici & App Maker</title>
-<meta name="description" content="Ekin Atasoy'un kişisel portföyü. Geliştirdiğim iOS uygulamaları ve projeler.">
+<meta name="description" content="Ekin Atasoy'un kişisel portföyü. Geliştirdiğim iOS uygulamaları ve oyunları.">
 <link rel="stylesheet" href="style.css">
 <style>
   /* --- yalnızca ana sayfaya özel --- */
@@ -18,22 +18,24 @@
   .hero p{margin-top:28px;font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:52ch}
   .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
 
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
     display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
   .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px -22px rgba(24,20,15,.4);border-color:var(--ink)}
   .thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-  .thumb span{font-family:var(--display);font-size:64px;font-weight:600;color:rgba(255,255,255,.92);mix-blend-mode:overlay}
-  .app-icon{width:92px;height:92px;border-radius:22px;box-shadow:0 12px 30px -8px rgba(0,0,0,.45)}
-  .t1{background:linear-gradient(135deg,#e8642e,#c9234a)}      /* Beybim */
-  .t2{background:linear-gradient(135deg,#0090d6,#012a3c)}      /* SUPKANO */
-  .t3{background:linear-gradient(135deg,#5b54c9,#2a2356)}
-  .t4{background:linear-gradient(135deg,#d49a1f,#8a4b14)}
-  .card-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .thumb span{font-family:var(--display);font-size:56px;font-weight:600;color:#fff;opacity:.95}
+  .app-icon{width:84px;height:84px;border-radius:20px;box-shadow:0 12px 30px -8px rgba(0,0,0,.45)}
+  .t1{background:linear-gradient(135deg,#e8642e,#c9234a)}        /* Beybim */
+  .t2{background:linear-gradient(135deg,#0090d6,#012a3c)}        /* SUPKANO */
+  .t-vize{background:linear-gradient(135deg,#12aab0,#0c4f5e)}    /* VizeLungo */
+  .t-galac{background:linear-gradient(135deg,#7c5cff,#211a4d)}   /* Galacticdef */
+  .t-bloom{background:linear-gradient(135deg,#ff7ab0,#a52462)}   /* Bloomendy */
+  .t-react{background:linear-gradient(135deg,#ff8a3d,#c22f16)}   /* Reaction */
+  .card-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:9px;flex:1}
   .card-top{display:flex;align-items:center;justify-content:space-between}
   .card-num{font-family:var(--mono);font-size:12px;color:var(--muted)}
-  .card h3{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-.01em}
-  .card p{font-size:15px;color:var(--muted);flex:1}
+  .card h3{font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:-.01em}
+  .card p{font-size:14.5px;color:var(--muted);flex:1}
   .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
   .tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:4px 9px}
   .card-link{font-weight:600;font-size:14px;color:var(--accent);display:inline-flex;gap:6px;align-items:center;margin-top:6px}
@@ -56,7 +58,8 @@
   .socials a{color:var(--muted);transition:color .2s}
   .socials a:hover{color:var(--accent)}
 
-  @media(max-width:760px){
+  @media(max-width:860px){ .grid{grid-template-columns:repeat(2,1fr)} }
+  @media(max-width:560px){
     .grid{grid-template-columns:1fr}
     .about-grid{grid-template-columns:1fr;gap:28px}
   }
@@ -79,8 +82,8 @@
   <!-- ===== HERO ===== -->
   <section class="hero wrap stagger">
     <div class="status reveal" style="--i:0"><span class="dot"></span> Yeni projelere açığım</div>
-    <h1 class="reveal" style="--i:1">iOS uygulamaları <em>tasarlıyor</em> ve geliştiriyorum.</h1>
-    <p class="reveal" style="--i:2">Merhaba, ben Ekin. Kullanışlı, hızlı ve güzel ürünler kurmayı seven bir geliştiriciyim. Aşağıda yaptığım uygulamalardan bir seçki var.</p>
+    <h1 class="reveal" style="--i:1">iOS uygulamaları ve oyunları <em>yapıyorum</em>.</h1>
+    <p class="reveal" style="--i:2">Merhaba, ben Ekin. Kullanışlı, hızlı ve güzel ürünler kurmayı seven bir geliştiriciyim. Aşağıda yaptığım uygulamalar var — her birine tıklayıp detayına, indirme linkine ve gizlilik politikasına ulaşabilirsin.</p>
     <div class="hero-cta reveal" style="--i:3">
       <a href="#work" class="btn btn-primary">Çalışmalarımı gör</a>
       <a href="#contact" class="btn btn-ghost">İletişime geç</a>
@@ -90,29 +93,67 @@
   <!-- ===== WORK ===== -->
   <section id="work" class="sec wrap">
     <div class="sec-head reveal">
-      <h2>Seçili Çalışmalar</h2>
-      <span class="eyebrow">Uygulamalar & Projeler</span>
+      <h2>Uygulamalar</h2>
+      <span class="eyebrow">6 proje</span>
     </div>
 
     <div class="grid">
-      <!-- Beybim → iOS detay şablonu -->
       <a href="beybim.html" class="card reveal">
-        <div class="thumb t1"><img class="app-icon" src="assets/beybim/icon.png" alt="Beybim uygulama ikonu"></div>
+        <div class="thumb t1"><img class="app-icon" src="assets/beybim/icon.png" alt="Beybim ikonu"></div>
         <div class="card-body">
           <div class="card-top"><h3>Beybim</h3><span class="card-num">01</span></div>
-          <p>Türkiye'ye özel anne-bebek rehberi: planlamadan ilk yaşa kadar takip, içerik ve destek tek uygulamada.</p>
+          <p>Türkiye'ye özel anne-bebek rehberi: planlamadan ilk yaşa kadar takip, içerik ve destek.</p>
           <div class="tags"><span class="tag">iOS</span><span class="tag">Sağlık</span></div>
           <span class="card-link">İncele <span class="arr">→</span></span>
         </div>
       </a>
 
-      <!-- SUPKANO → web detay şablonu -->
       <a href="supkano.html" class="card reveal">
-        <div class="thumb t2"><img class="app-icon" src="assets/supkano/logo.png" alt="SUPKANO uygulama ikonu"></div>
+        <div class="thumb t2"><img class="app-icon" src="assets/supkano/logo.png" alt="SUPKANO ikonu"></div>
         <div class="card-body">
           <div class="card-top"><h3>SUPKANO</h3><span class="card-num">02</span></div>
-          <p>SUP ve kano tutkunları için GPS rota takibi, rota keşfi ve topluluk — suya çık, rotanı bırak.</p>
+          <p>SUP ve kano tutkunları için GPS rota takibi, rota keşfi ve topluluk.</p>
           <div class="tags"><span class="tag">iOS</span><span class="tag">Topluluk</span></div>
+          <span class="card-link">İncele <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a href="vizelungo.html" class="card reveal">
+        <div class="thumb t-vize"><span>V</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3>VizeLungo</h3><span class="card-num">03</span></div>
+          <p>Vize başvuru sürecini topluluğun anonim verisiyle takip et — Schengen ve fazlası.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag">Seyahat</span></div>
+          <span class="card-link">İncele <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a href="galacticdef.html" class="card reveal">
+        <div class="thumb t-galac"><span>G</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Galacticdef</h3><span class="card-num">04</span></div>
+          <p>Çevrimdışı uzay savunma oyunu: dalga dalga savun, yıldız topla, rekor kır.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag">Oyun</span></div>
+          <span class="card-link">İncele <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a href="bloomendy.html" class="card reveal">
+        <div class="thumb t-bloom"><span>B</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Bloomendy</h3><span class="card-num">05</span></div>
+          <p>Rahatlatıcı bir merge bulmaca oyunu: birleştir, patlat, günlük serini koru.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag">Oyun</span></div>
+          <span class="card-link">İncele <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a href="reaction.html" class="card reveal">
+        <div class="thumb t-react"><span>R</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Reaction</h3><span class="card-num">06</span></div>
+          <p>Reflekslerini test eden hızlı bir mini oyun. <!-- DÜZENLE: gerçek açıklama --></p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag">Oyun</span></div>
           <span class="card-link">İncele <span class="arr">→</span></span>
         </div>
       </a>
@@ -127,13 +168,13 @@
     </div>
     <div class="about-grid">
       <div class="facts reveal">
-        <div>Konum<strong>Türkiye</strong></div>
-        <div>Odak<strong>iOS · Mobil · Web</strong></div>
-        <div>Araçlar<strong>Swift, SwiftUI, Web</strong></div>
+        <div>Konum<strong>İstanbul, Türkiye</strong></div>
+        <div>Odak<strong>iOS · Oyun · Mobil</strong></div>
+        <div>Araçlar<strong>Swift, SwiftUI</strong></div>
         <div>Durum<strong>Freelance / İş Birliği</strong></div>
       </div>
       <div class="reveal">
-        <p>Fikirleri App Store'da yayınlanan ürünlere dönüştürüyorum. İlgi alanım; sade arayüzler, hızlı performans ve kullanıcının işini gerçekten kolaylaştıran detaylar.</p>
+        <p>Fikirleri App Store'da yayınlanan ürünlere dönüştürüyorum — sağlık uygulamalarından oyunlara. İlgi alanım; sade arayüzler, hızlı performans ve kullanıcının işini gerçekten kolaylaştıran detaylar.</p>
         <p>Yeni teknolojiler denemeyi, kişisel projeler geliştirmeyi ve öğrendiklerimi paylaşmayı seviyorum. Birlikte bir şeyler yapmak istersen mesajın bir tık uzakta.</p>
       </div>
     </div>
@@ -143,11 +184,11 @@
   <section id="contact" class="contact wrap">
     <span class="eyebrow reveal">İletişim</span>
     <h2 class="reveal" style="margin-top:18px">Hadi birlikte<br>bir şeyler yapalım.</h2>
-   
     <a href="mailto:ekinatasoy4@gmail.com" class="mail reveal">ekinatasoy4@gmail.com</a>
     <div class="socials reveal">
       <a href="https://github.com/ekinemreatasoy" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/ekinemreatasoy" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/" target="_blank" rel="noopener">X / Twitter</a>
     </div>
   </section>
 </main>

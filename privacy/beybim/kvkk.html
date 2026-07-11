@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KVKK Aydınlatma Metni — Beybim</title>
+<meta name="robots" content="index,follow" />
+<style>
+  :root{
+    --coral:#FF5A5F; --coral-deep:#E83C49; --blush:#FFE2D9; --cream:#FBF6F1;
+    --surface:#fff; --stroke:#EFE6DD; --ink:#2B2A28; --ink-muted:#6B6660;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+  .top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .mark{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#FFB199,var(--coral));display:grid;place-items:center;color:#fff;font-weight:800;font-family:'Varela Round',sans-serif}
+  .brand{font-size:1.4rem;font-weight:800}
+  h1{font-size:2rem;margin:24px 0 6px;line-height:1.2}
+  .meta{color:var(--ink-muted);font-size:.92rem;margin-bottom:28px}
+  h2{font-size:1.25rem;margin:34px 0 10px;color:var(--coral-deep)}
+  p,li{color:#3a3733;font-size:1rem}
+  ul{margin:8px 0 8px 22px}
+  li{margin:5px 0}
+  a{color:var(--coral-deep)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+  th,td{border:1px solid var(--stroke);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--blush)}
+  .note{background:var(--blush);border-radius:14px;padding:14px 18px;font-size:.92rem;color:#5a4a44;margin:18px 0}
+  .fill{background:#FFF3CD;border-radius:6px;padding:1px 6px;font-weight:700}
+  .back{display:inline-block;margin-top:32px;color:var(--coral-deep);font-weight:700}
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--stroke);color:#9A938B;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="mark">B</span>
+    <span class="brand">Beybim</span>
+  </div>
+  <h1>KVKK Aydınlatma Metni</h1>
+  <p class="meta">6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında · Son güncelleme: <span class="fill">[20.06.2026]</span></p>
+
+  <p>İşbu Aydınlatma Metni, Beybim uygulaması ("Uygulama") aracılığıyla işlenen kişisel verilerinize ilişkin olarak, veri sorumlusu sıfatıyla <strong>Ekin Emre Atasoy</strong> tarafından KVKK m.10 uyarınca hazırlanmıştır.</p>
+
+  <h2>1. Veri Sorumlusu</h2>
+  <div class="note">
+    Veri Sorumlusu: <strong>Ekin Emre Atasoy</strong><br/>
+    E-posta: <a href="mailto:studyosefo@gmail.com">studyosefo@gmail.com</a>
+  </div>
+
+  <h2>2. İşlenen Kişisel Veriler</h2>
+  <p>Uygulamanın çalışması için aşağıdaki veriler işlenir. <strong>Sağlık ve kişisel günlük verileri yalnızca cihazınızda saklanır; sunucularımıza aktarılmaz.</strong></p>
+  <table>
+    <tr><th>Veri Kategorisi</th><th>Örnekler</th><th>Saklama Yeri</th></tr>
+    <tr><td>Kimlik / Profil</td><td>Ad (takma ad), dönem, tahmini tarihler</td><td>Cihaz</td></tr>
+    <tr><td>Sağlık (özel nitelikli)</td><td>Gebelik takibi, tansiyon, kilo, kan şekeri, döngü, EPDS, mood, bebek gelişimi</td><td>Cihaz</td></tr>
+    <tr><td>Görsel</td><td>Hatıra/bebek fotoğrafları</td><td>Cihaz</td></tr>
+    <tr><td>İşlem güvenliği / teknik</td><td>Firebase Yükleme Kimliği, bildirim jetonu, uygulama sürümü</td><td>Google Firebase</td></tr>
+  </table>
+
+  <h2>3. Kişisel Verilerin İşlenme Amaçları</h2>
+  <ul>
+    <li>Uygulamanın temel işlevlerinin (takip, içerik, rehber) sunulması</li>
+    <li>Döneminize uygun içerik ve hatırlatmaların gösterilmesi</li>
+    <li>İçeriğin güncel tutulması (Remote Config) ve bildirim gönderimi (FCM)</li>
+    <li>Uygulama güvenliği ve hata giderme</li>
+  </ul>
+
+  <h2>4. İşlemenin Hukuki Sebebi</h2>
+  <ul>
+    <li><strong>KVKK m.5/2-c:</strong> Sözleşmenin (uygulama hizmetinin) ifası için gerekli olması</li>
+    <li><strong>KVKK m.5/2-f:</strong> Meşru menfaat (uygulamanın çalışması, güvenliği)</li>
+    <li><strong>Özel nitelikli sağlık verileri (KVKK m.6):</strong> Yalnızca cihazınızda, sizin girişinizle ve <strong>açık rızanıza</strong> dayalı olarak işlenir; tarafımıza aktarılmaz.</li>
+    <li><strong>Yurt dışına aktarım (Firebase):</strong> Teknik kimlik/jeton verilerinin Google altyapısına aktarımı <strong>açık rızanıza</strong> dayanır.</li>
+  </ul>
+
+  <h2>5. Verilerin Aktarımı</h2>
+  <p>Sağlık ve kişisel günlük verileriniz <strong>hiçbir üçüncü tarafa aktarılmaz</strong>; cihazınızda kalır. Yalnızca teknik kimlik/bildirim jetonu, içerik güncelleme ve bildirim hizmeti için Google Firebase (yurt dışı — ABD) altyapısında işlenir. Reklam/izleme amaçlı aktarım yapılmaz.</p>
+
+  <h2>6. Toplama Yöntemi</h2>
+  <p>Veriler, Uygulamayı kullanımınız sırasında doğrudan sizin tarafınızdan girilen bilgiler ve cihazınızca otomatik üretilen teknik kimlikler aracılığıyla elektronik ortamda toplanır.</p>
+
+  <h2>7. İlgili Kişinin Hakları (KVKK m.11)</h2>
+  <p>Kişisel verilerinize ilişkin olarak; işlenip işlenmediğini öğrenme, bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, düzeltilmesini/silinmesini isteme, işlemenin sınırlandırılmasını talep etme ve zararın giderilmesini talep etme haklarına sahipsiniz. Cihazınızdaki verileri Uygulama içinden dilediğiniz an silebilirsiniz.</p>
+
+  <h2>8. Başvuru</h2>
+  <p>Haklarınızı kullanmak için <a href="mailto:studyosefo@gmail.com">studyosefo@gmail.com</a> adresine başvurabilirsiniz. Başvurularınız en geç 30 gün içinde sonuçlandırılır.</p>
+
+  <p>Detaylı bilgi için <a href="gizlilik.html">Gizlilik Politikası</a>nı inceleyebilirsiniz.</p>
+
+  <a class="back" href="index.html">← Ana sayfaya dön</a>
+
+  <footer>© 2026 Beybim. Tüm hakları saklıdır.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gizlilik Politikası — Beybim</title>
+<meta name="robots" content="index,follow" />
+<style>
+  :root{
+    --coral:#FF5A5F; --coral-deep:#E83C49; --blush:#FFE2D9; --cream:#FBF6F1;
+    --surface:#fff; --stroke:#EFE6DD; --ink:#2B2A28; --ink-muted:#6B6660;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+  .top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .mark{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#FFB199,var(--coral));display:grid;place-items:center;color:#fff;font-weight:800;font-family:'Varela Round',sans-serif}
+  .brand{font-size:1.4rem;font-weight:800}
+  h1{font-size:2rem;margin:24px 0 6px;line-height:1.2}
+  .meta{color:var(--ink-muted);font-size:.92rem;margin-bottom:28px}
+  h2{font-size:1.25rem;margin:34px 0 10px;color:var(--coral-deep)}
+  h3{font-size:1.05rem;margin:18px 0 6px}
+  p,li{color:#3a3733;font-size:1rem}
+  ul{margin:8px 0 8px 22px}
+  li{margin:5px 0}
+  a{color:var(--coral-deep)}
+  .card{background:var(--surface);border:1px solid var(--stroke);border-radius:16px;padding:18px 20px;margin:16px 0}
+  .note{background:var(--blush);border-radius:14px;padding:14px 18px;font-size:.92rem;color:#5a4a44;margin:18px 0}
+  .back{display:inline-block;margin-top:32px;color:var(--coral-deep);font-weight:700}
+  .fill{background:#FFF3CD;border-radius:6px;padding:1px 6px;font-weight:700}
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--stroke);color:#9A938B;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="mark">B</span>
+    <span class="brand">Beybim</span>
+  </div>
+  <h1>Gizlilik Politikası</h1>
+  <p class="meta">Son güncelleme: <span class="fill">[20.06.2026]</span> · Geçerli sürüm: 1.0</p>
+
+  <p>Beybim ("Uygulama"), gizliliğine değer verir. Bu politika; hangi verilerin işlendiğini, nasıl saklandığını ve haklarını açıklar. Beybim'in temel ilkesi <strong>verilerinin mümkün olduğunca cihazında kalmasıdır</strong>.</p>
+
+  <div class="note">
+    Veri sorumlusu: <strong>Ekin Emre Atasoy</strong> ·
+    İletişim: <a href="mailto:studyosefo@gmail.com">studyosefo@gmail.com</a>
+  </div>
+
+  <h2>1. Cihazında Kalan Veriler</h2>
+  <p>Aşağıdaki veriler yalnızca <strong>senin cihazında</strong> (Apple SwiftData ile) saklanır; sunucularımıza gönderilmez, üçüncü taraflarla paylaşılmaz:</p>
+  <ul>
+    <li>Profil bilgilerin (ad, dönem, tarihler)</li>
+    <li>Sağlık takip kayıtların (tekme, kasılma, tansiyon, kilo, kan şekeri, su, uyku, semptom, randevu)</li>
+    <li>Döngü, ovülasyon ve bazal sıcaklık kayıtların</li>
+    <li>Mood günlüğü, kişisel notlar ve EPDS tarama sonuçların</li>
+    <li>Bebek gelişim verileri, aşı/ek gıda kayıtları, fotoğraflar ve hatıralar</li>
+    <li>Doğum planı, hastane çantası ve acil bilgilerin</li>
+  </ul>
+  <p>Bu verileri istediğin zaman Uygulama içinden silebilirsin (Profil → Onboarding'i sıfırla ya da ilgili kayıtları tek tek sil). Uygulamayı sildiğinde bu veriler cihazından kaldırılır.</p>
+
+  <h2>2. Apple Health (HealthKit)</h2>
+  <p>İzin verirsen Beybim, Apple Health'ten <strong>yalnızca okuma</strong> amacıyla adım, su, kilo ve uyku verilerini okur; kilo ve su girdilerini Health'e yazabilir. Bu veriler cihazında kalır, tarafımıza veya üçüncü taraflara aktarılmaz. İzni dilediğin zaman iOS Ayarlar → Sağlık → Beybim'den geri alabilirsin.</p>
+
+  <h2>3. İçerik Güncelleme ve Bildirimler (Firebase)</h2>
+  <p>Uygulama içeriğini (tarif, egzersiz, bilgi kartları) App Store güncellemesi olmadan tazelemek ve sana bildirim gönderebilmek için Google Firebase hizmetlerini kullanırız:</p>
+  <ul>
+    <li><strong>Firebase Remote Config:</strong> Güncel içeriği indirir. Bu sırada anonim bir Firebase Yükleme Kimliği (Installation ID) ve uygulama/cihaz sürüm bilgisi Google'a iletilir.</li>
+    <li><strong>Firebase Cloud Messaging (Bildirimler):</strong> Bildirim gönderebilmek için cihazına ait bir bildirim jetonu (token) oluşturulur ve Google/Apple altyapısında tutulur.</li>
+  </ul>
+  <p>Bu kimlikler <strong>adına veya sağlık verilerine bağlı değildir</strong>, reklam/izleme amacıyla kullanılmaz. Sağlık ve kişisel kayıtların bu hizmetlere gönderilmez.</p>
+
+  <h2>4. Reklam ve İzleme Yok</h2>
+  <p>Beybim'de reklam, üçüncü taraf reklam ağı veya kullanıcı izleme (tracking) <strong>yoktur</strong>. Analitik amaçlı kullanıcı takibi yapmıyoruz.</p>
+
+  <h2>5. Fotoğraflar</h2>
+  <p>Hatıralara veya bebek profiline eklediğin fotoğraflar yalnızca cihazında saklanır. Fotoğraf kütüphanene yalnızca senin seçtiğin görsel için erişilir.</p>
+
+  <h2>6. Çocukların Gizliliği</h2>
+  <p>Beybim yetişkin kullanıcılara yöneliktir; 18 yaş altından bilerek veri toplamayız. Uygulamadaki bebek verileri ebeveyn tarafından girilir ve cihazda kalır.</p>
+
+  <h2>7. Güvenlik</h2>
+  <p>Veriler cihazında iOS'un sunduğu koruma ile saklanır; ağ üzerinden yapılan tüm iletişim şifrelidir (HTTPS). Yine de hiçbir sistemin %100 güvenli olmadığını hatırlatırız.</p>
+
+  <h2>8. Tıbbi Uyarı</h2>
+  <p>Beybim bilgilendirme amaçlıdır; tıbbi tavsiye, tanı veya tedavi yerine geçmez. Sağlığınla ilgili kararlarda her zaman hekimine danış.</p>
+
+  <h2>9. Değişiklikler</h2>
+  <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde Uygulama veya bu sayfa üzerinden bilgilendiririz.</p>
+
+  <h2>10. İletişim</h2>
+  <p>Sorularınız için: <a href="mailto:studyosefo@gmail.com">studyosefo@gmail.com</a></p>
+
+  <p>KVKK kapsamındaki haklarınız ve detaylı aydınlatma için <a href="kvkk.html">KVKK Aydınlatma Metni</a>ni inceleyin.</p>
+
+  <a class="back" href="index.html">← Ana sayfaya dön</a>
+
+  <footer>© 2026 Beybim. Tüm hakları saklıdır.</footer>
+</div>
+</body>
+</html>
