@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ekin Atasoy — Yazılım Geliştirici & App Maker</title>
+<title data-en="Ekin Atasoy — Software Developer &amp; App Maker" data-de="Ekin Atasoy — Softwareentwickler &amp; App Maker">Ekin Atasoy — Yazılım Geliştirici &amp; App Maker</title>
 <meta name="description" content="Ekin Atasoy'un kişisel portföyü. Geliştirdiğim iOS uygulamaları ve oyunları.">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -25,12 +25,12 @@
   .thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
   .thumb span{font-family:var(--display);font-size:56px;font-weight:600;color:#fff;opacity:.95}
   .app-icon{width:84px;height:84px;border-radius:20px;box-shadow:0 12px 30px -8px rgba(0,0,0,.45)}
-  .t1{background:linear-gradient(135deg,#e8642e,#c9234a)}        /* Beybim */
-  .t2{background:linear-gradient(135deg,#0090d6,#012a3c)}        /* SUPKANO */
-  .t-vize{background:linear-gradient(135deg,#12aab0,#0c4f5e)}    /* VizeLungo */
-  .t-galac{background:linear-gradient(135deg,#7c5cff,#211a4d)}   /* Galacticdef */
-  .t-bloom{background:linear-gradient(135deg,#ff7ab0,#a52462)}   /* Bloomendy */
-  .t-react{background:linear-gradient(135deg,#ff8a3d,#c22f16)}   /* Reaction */
+  .t1{background:linear-gradient(135deg,#e8642e,#c9234a)}
+  .t2{background:linear-gradient(135deg,#0090d6,#012a3c)}
+  .t-vize{background:linear-gradient(135deg,#12aab0,#0c4f5e)}
+  .t-galac{background:linear-gradient(135deg,#7c5cff,#211a4d)}
+  .t-bloom{background:linear-gradient(135deg,#ff7ab0,#a52462)}
+  .t-react{background:linear-gradient(135deg,#ff8a3d,#c22f16)}
   .card-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:9px;flex:1}
   .card-top{display:flex;align-items:center;justify-content:space-between}
   .card-num{font-family:var(--mono);font-size:12px;color:var(--muted)}
@@ -70,92 +70,99 @@
 <header>
   <div class="wrap nav">
     <a href="#" class="brand">Ekin Atasoy</a>
-    <nav class="nav-links">
-      <a href="#work">Çalışmalar</a>
-      <a href="#about">Hakkımda</a>
-      <a href="cv.html">CV</a>
-      <a href="#contact">İletişim</a>
-    </nav>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#work" data-en="Work" data-de="Projekte">Çalışmalar</a>
+        <a href="#about" data-en="About" data-de="Über mich">Hakkımda</a>
+        <a href="cv.html">CV</a>
+        <a href="#contact" data-en="Contact" data-de="Kontakt">İletişim</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button data-lang="tr" type="button">TR</button>
+        <button data-lang="en" type="button">EN</button>
+        <button data-lang="de" type="button">DE</button>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
   <!-- ===== HERO ===== -->
   <section class="hero wrap stagger">
-    <div class="status reveal" style="--i:0"><span class="dot"></span> Yeni projelere açığım</div>
-    <h1 class="reveal" style="--i:1">iOS uygulamaları ve oyunları <em>yapıyorum</em>.</h1>
-    <p class="reveal" style="--i:2">Merhaba, ben Ekin. Kullanışlı, hızlı ve güzel ürünler kurmayı seven bir geliştiriciyim. Aşağıda yaptığım uygulamalar var — her birine tıklayıp detayına, indirme linkine ve gizlilik politikasına ulaşabilirsin.</p>
+    <div class="status reveal" style="--i:0"><span class="dot"></span> <span data-en="Open to new projects" data-de="Offen für neue Projekte">Yeni projelere açığım</span></div>
+    <h1 class="reveal" style="--i:1" data-en="I <em>build</em> iOS apps and games." data-de="Ich <em>entwickle</em> iOS-Apps und Spiele.">iOS uygulamaları ve oyunları <em>yapıyorum</em>.</h1>
+    <p class="reveal" style="--i:2" data-en="Hi, I'm Ekin — a developer who loves building useful, fast and beautiful products. Below are the apps I've made; tap any of them for details, download links and privacy policy." data-de="Hallo, ich bin Ekin – ein Entwickler, der gerne nützliche, schnelle und schöne Produkte baut. Unten findest du meine Apps; tippe auf eine für Details, Download-Links und Datenschutz.">Merhaba, ben Ekin. Kullanışlı, hızlı ve güzel ürünler kurmayı seven bir geliştiriciyim. Aşağıda yaptığım uygulamalar var — her birine tıklayıp detayına, indirme linkine ve gizlilik politikasına ulaşabilirsin.</p>
     <div class="hero-cta reveal" style="--i:3">
-      <a href="#work" class="btn btn-primary">Çalışmalarımı gör</a>
-      <a href="#contact" class="btn btn-ghost">İletişime geç</a>
+      <a href="#work" class="btn btn-primary" data-en="See my work" data-de="Meine Arbeiten">Çalışmalarımı gör</a>
+      <a href="#contact" class="btn btn-ghost" data-en="Get in touch" data-de="Kontakt aufnehmen">İletişime geç</a>
     </div>
   </section>
 
   <!-- ===== WORK ===== -->
   <section id="work" class="sec wrap">
     <div class="sec-head reveal">
-      <h2>Uygulamalar</h2>
-      <span class="eyebrow">6 proje</span>
+      <h2 data-en="Apps" data-de="Apps">Uygulamalar</h2>
+      <span class="eyebrow" data-en="6 projects" data-de="6 Projekte">6 proje</span>
     </div>
 
     <div class="grid">
       <a href="beybim.html" class="card reveal">
-        <div class="thumb t1"><img class="app-icon" src="assets/beybim/icon.png" alt="Beybim ikonu"></div>
+        <div class="thumb t1"><img class="app-icon" src="assets/beybim/icon.png" alt="Beybim"></div>
         <div class="card-body">
           <div class="card-top"><h3>Beybim</h3><span class="card-num">01</span></div>
-          <p>Türkiye'ye özel anne-bebek rehberi: planlamadan ilk yaşa kadar takip, içerik ve destek.</p>
-          <div class="tags"><span class="tag">iOS</span><span class="tag">Sağlık</span></div>
-          <span class="card-link">İncele <span class="arr">→</span></span>
+          <p data-en="A Turkey-focused pregnancy &amp; baby guide: tracking, content and support from planning to the first year." data-de="Ein Schwangerschafts- und Baby-Guide für die Türkei: Tracking, Inhalte und Unterstützung von der Planung bis zum ersten Jahr.">Türkiye'ye özel anne-bebek rehberi: planlamadan ilk yaşa kadar takip, içerik ve destek.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag" data-en="Health" data-de="Gesundheit">Sağlık</span></div>
+          <span class="card-link"><span data-en="View" data-de="Ansehen">İncele</span> <span class="arr">→</span></span>
         </div>
       </a>
 
       <a href="supkano.html" class="card reveal">
-        <div class="thumb t2"><img class="app-icon" src="assets/supkano/logo.png" alt="SUPKANO ikonu"></div>
+        <div class="thumb t2"><img class="app-icon" src="assets/supkano/logo.png" alt="SUPKANO"></div>
         <div class="card-body">
           <div class="card-top"><h3>SUPKANO</h3><span class="card-num">02</span></div>
-          <p>SUP ve kano tutkunları için GPS rota takibi, rota keşfi ve topluluk.</p>
-          <div class="tags"><span class="tag">iOS</span><span class="tag">Topluluk</span></div>
-          <span class="card-link">İncele <span class="arr">→</span></span>
+          <p data-en="GPS route tracking, route discovery and community for SUP and canoe lovers." data-de="GPS-Routen-Tracking, Routenentdeckung und Community für SUP- und Kanu-Fans.">SUP ve kano tutkunları için GPS rota takibi, rota keşfi ve topluluk.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag" data-en="Community" data-de="Community">Topluluk</span></div>
+          <span class="card-link"><span data-en="View" data-de="Ansehen">İncele</span> <span class="arr">→</span></span>
         </div>
       </a>
 
       <a href="vizelungo.html" class="card reveal">
-        <div class="thumb t-vize"><img class="app-icon" src="assets/vizelungo/icon.png" alt="VizeLungo ikonu"></div>
+        <div class="thumb t-vize"><img class="app-icon" src="assets/vizelungo/icon.png" alt="VizeLungo"></div>
         <div class="card-body">
           <div class="card-top"><h3>VizeLungo</h3><span class="card-num">03</span></div>
-          <p>Vize başvuru sürecini topluluğun anonim verisiyle takip et — Schengen ve fazlası.</p>
-          <div class="tags"><span class="tag">iOS</span><span class="tag">Seyahat</span></div>
-          <span class="card-link">İncele <span class="arr">→</span></span>
+          <p data-en="Track visa processing times with the community's anonymous data — Schengen and beyond." data-de="Verfolge Visa-Bearbeitungszeiten mit anonymen Community-Daten – Schengen und mehr.">Vize başvuru sürecini topluluğun anonim verisiyle takip et — Schengen ve fazlası.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag" data-en="Travel" data-de="Reise">Seyahat</span></div>
+          <span class="card-link"><span data-en="View" data-de="Ansehen">İncele</span> <span class="arr">→</span></span>
         </div>
       </a>
 
       <a href="galacticdef.html" class="card reveal">
-        <div class="thumb t-galac"><img class="app-icon" src="assets/galacticdef/icon.png" alt="Galacticdef ikonu"></div>
+        <div class="thumb t-galac"><img class="app-icon" src="assets/galacticdef/icon.png" alt="Galacticdef"></div>
         <div class="card-body">
           <div class="card-top"><h3>Galacticdef</h3><span class="card-num">04</span></div>
-          <p>Neon vektör bir tower defense: kuleleri diz, dalgaları püskürt, çekirdeği koru.</p>
-          <div class="tags"><span class="tag">iOS</span><span class="tag">Oyun</span></div>
-          <span class="card-link">İncele <span class="arr">→</span></span>
+          <p data-en="A neon-vector tower defense: place towers, repel waves, protect the core." data-de="Ein Neon-Vektor-Tower-Defense: Türme platzieren, Wellen abwehren, den Kern schützen.">Neon vektör bir tower defense: kuleleri diz, dalgaları püskürt, çekirdeği koru.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag" data-en="Game" data-de="Spiel">Oyun</span></div>
+          <span class="card-link"><span data-en="View" data-de="Ansehen">İncele</span> <span class="arr">→</span></span>
         </div>
       </a>
 
       <a href="bloomendy.html" class="card reveal">
-        <div class="thumb t-bloom"><img class="app-icon" src="assets/bloomendy/icon.png" alt="Bloomendy ikonu"></div>
+        <div class="thumb t-bloom"><img class="app-icon" src="assets/bloomendy/icon.png" alt="Bloomendy"></div>
         <div class="card-body">
           <div class="card-top"><h3>Bloomendy</h3><span class="card-num">05</span></div>
-          <p>Rahatlatıcı bir merge bulmaca oyunu: birleştir, patlat, günlük serini koru.</p>
-          <div class="tags"><span class="tag">iOS</span><span class="tag">Oyun</span></div>
-          <span class="card-link">İncele <span class="arr">→</span></span>
+          <p data-en="A relaxing merge puzzle: combine, pop, keep your daily streak." data-de="Ein entspannendes Merge-Puzzle: kombinieren, platzen lassen, deine tägliche Serie halten.">Rahatlatıcı bir merge bulmaca oyunu: birleştir, patlat, günlük serini koru.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag" data-en="Game" data-de="Spiel">Oyun</span></div>
+          <span class="card-link"><span data-en="View" data-de="Ansehen">İncele</span> <span class="arr">→</span></span>
         </div>
       </a>
 
       <a href="reaction.html" class="card reveal">
-        <div class="thumb t-react"><img class="app-icon" src="assets/reaction/icon.png" alt="Reaction ikonu"></div>
+        <div class="thumb t-react"><img class="app-icon" src="assets/reaction/icon.png" alt="Reaction"></div>
         <div class="card-body">
           <div class="card-top"><h3>Reaction</h3><span class="card-num">06</span></div>
-          <p>Günde birkaç dakikada zihnini hızlandıran, 11 mini oyunluk bir beyin antrenmanı.</p>
-          <div class="tags"><span class="tag">iOS</span><span class="tag">Oyun</span></div>
-          <span class="card-link">İncele <span class="arr">→</span></span>
+          <p data-en="A brain-training app with 11 mini-games to sharpen your mind in a few minutes a day." data-de="Ein Gehirntraining mit 11 Minispielen, das deinen Geist in wenigen Minuten pro Tag schärft.">Günde birkaç dakikada zihnini hızlandıran, 11 mini oyunluk bir beyin antrenmanı.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag" data-en="Game" data-de="Spiel">Oyun</span></div>
+          <span class="card-link"><span data-en="View" data-de="Ansehen">İncele</span> <span class="arr">→</span></span>
         </div>
       </a>
     </div>
@@ -164,27 +171,27 @@
   <!-- ===== ABOUT ===== -->
   <section id="about" class="sec wrap">
     <div class="sec-head reveal">
-      <h2>Hakkımda</h2>
-      <span class="eyebrow">Kim — Ne — Nasıl</span>
+      <h2 data-en="About" data-de="Über mich">Hakkımda</h2>
+      <span class="eyebrow" data-en="Who — What — How" data-de="Wer — Was — Wie">Kim — Ne — Nasıl</span>
     </div>
     <div class="about-grid">
       <div class="facts reveal">
-        <div>Konum<strong>İstanbul, Türkiye</strong></div>
-        <div>Odak<strong>iOS · Oyun · Mobil</strong></div>
-        <div>Araçlar<strong>Swift, SwiftUI</strong></div>
-        <div>Durum<strong>Freelance / İş Birliği</strong></div>
+        <div><span data-en="Location" data-de="Standort">Konum</span><strong>İstanbul, Türkiye</strong></div>
+        <div><span data-en="Focus" data-de="Fokus">Odak</span><strong data-en="iOS · Games · Mobile" data-de="iOS · Spiele · Mobile">iOS · Oyun · Mobil</strong></div>
+        <div><span data-en="Tools" data-de="Werkzeuge">Araçlar</span><strong>Swift, SwiftUI</strong></div>
+        <div><span data-en="Status" data-de="Status">Durum</span><strong data-en="Freelance / Collaboration" data-de="Freelance / Zusammenarbeit">Freelance / İş Birliği</strong></div>
       </div>
       <div class="reveal">
-        <p>Fikirleri App Store'da yayınlanan ürünlere dönüştürüyorum — sağlık uygulamalarından oyunlara. İlgi alanım; sade arayüzler, hızlı performans ve kullanıcının işini gerçekten kolaylaştıran detaylar.</p>
-        <p>Yeni teknolojiler denemeyi, kişisel projeler geliştirmeyi ve öğrendiklerimi paylaşmayı seviyorum. Birlikte bir şeyler yapmak istersen mesajın bir tık uzakta.</p>
+        <p data-en="I turn ideas into products published on the App Store — from health apps to games. I care about clean interfaces, fast performance and the details that genuinely make users' lives easier." data-de="Ich verwandle Ideen in Produkte, die im App Store veröffentlicht werden – von Gesundheits-Apps bis zu Spielen. Mir sind klare Oberflächen, schnelle Performance und Details wichtig, die den Alltag der Nutzer wirklich erleichtern.">Fikirleri App Store'da yayınlanan ürünlere dönüştürüyorum — sağlık uygulamalarından oyunlara. İlgi alanım; sade arayüzler, hızlı performans ve kullanıcının işini gerçekten kolaylaştıran detaylar.</p>
+        <p data-en="I enjoy trying new technologies, building side projects and sharing what I learn. If you'd like to build something together, your message is one click away." data-de="Ich probiere gerne neue Technologien aus, baue eigene Projekte und teile, was ich lerne. Wenn du gemeinsam etwas bauen möchtest, ist deine Nachricht nur einen Klick entfernt.">Yeni teknolojiler denemeyi, kişisel projeler geliştirmeyi ve öğrendiklerimi paylaşmayı seviyorum. Birlikte bir şeyler yapmak istersen mesajın bir tık uzakta.</p>
       </div>
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="contact wrap">
-    <span class="eyebrow reveal">İletişim</span>
-    <h2 class="reveal" style="margin-top:18px">Hadi birlikte<br>bir şeyler yapalım.</h2>
+    <span class="eyebrow reveal" data-en="Contact" data-de="Kontakt">İletişim</span>
+    <h2 class="reveal" style="margin-top:18px" data-en="Let's build<br>something together." data-de="Lass uns gemeinsam<br>etwas bauen.">Hadi birlikte<br>bir şeyler yapalım.</h2>
     <a href="mailto:ekinatasoy4@gmail.com" class="mail reveal">ekinatasoy4@gmail.com</a>
     <div class="socials reveal">
       <a href="https://github.com/ekinemreatasoy" target="_blank" rel="noopener">GitHub</a>
@@ -194,8 +201,9 @@
   </section>
 </main>
 
-<footer>© <span id="yr"></span> Ekin Atasoy — Tüm hakları saklıdır.</footer>
+<footer>© <span id="yr"></span> Ekin Atasoy — <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">Tüm hakları saklıdır.</span></footer>
 
 <script src="app.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>

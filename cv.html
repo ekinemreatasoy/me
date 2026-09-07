@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV — Ekin Emre Atasoy · iOS Developer</title>
+<title data-en="CV — Ekin Emre Atasoy · iOS Developer" data-de="Lebenslauf — Ekin Emre Atasoy · iOS-Entwickler">CV — Ekin Emre Atasoy · iOS Developer</title>
 <meta name="description" content="Ekin Emre Atasoy — iOS Developer. Deneyim, projeler, eğitim ve yetenekler. PDF olarak indir.">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -36,16 +36,23 @@
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand">Ekin Atasoy</a>
-    <a href="index.html" class="back">← Portföy</a>
+    <div class="nav-right">
+      <a href="index.html" class="back" data-en="← Portfolio" data-de="← Portfolio">← Portföy</a>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button data-lang="tr" type="button">TR</button>
+        <button data-lang="en" type="button">EN</button>
+        <button data-lang="de" type="button">DE</button>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
   <!-- ===== HERO ===== -->
   <section class="cv-hero wrap stagger">
-    <div class="reveal" style="--i:0"><span class="eyebrow">Özgeçmiş</span></div>
+    <div class="reveal" style="--i:0"><span class="eyebrow" data-en="Résumé" data-de="Lebenslauf">Özgeçmiş</span></div>
     <h1 class="reveal" style="--i:1">Ekin Emre Atasoy</h1>
-    <p class="role reveal" style="--i:2">iOS Developer · İstanbul, Türkiye</p>
+    <p class="role reveal" style="--i:2" data-en="iOS Developer · Istanbul, Türkiye" data-de="iOS-Entwickler · Istanbul, Türkei">iOS Developer · İstanbul, Türkiye</p>
     <div class="cv-contact reveal" style="--i:3">
       <a href="mailto:ekin-atasoy@hotmail.com">ekin-atasoy@hotmail.com</a>
       <a href="tel:+905465381997">+90 546 538 1997</a>
@@ -53,42 +60,42 @@
       <a href="https://www.linkedin.com/in/ekinemreatasoy" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="cv-dl reveal" style="--i:4">
-      <a href="Cv/Ekin_Emre_Atasoy_CV.pdf" download class="btn btn-primary">PDF olarak indir ↓</a>
+      <a href="Cv/Ekin_Emre_Atasoy_CV.pdf" download class="btn btn-primary" data-en="Download as PDF ↓" data-de="Als PDF herunterladen ↓">PDF olarak indir ↓</a>
     </div>
   </section>
 
   <!-- ===== SUMMARY ===== -->
   <section class="sec wrap">
-    <div class="sec-head reveal"><h2>Özet</h2><span class="eyebrow">Summary</span></div>
-    <p class="lead-text reveal">Swift, UIKit ve SwiftUI ile üretim seviyesinde mobil uygulamalar geliştiren ve ölçekleyen bir iOS geliştiricisiyim. MVVM mimarisi, asenkron programlama, çoklu iş parçacığı (multithreading) ve veri kalıcılığı konularında güçlüyüm. Bir özelliği mimari kararlardan API entegrasyonuna, performans optimizasyonundan legacy kod refaktörüne kadar uçtan uca sahiplenebiliyorum. Ölçeklenebilir, sürdürülebilir ve test edilebilir kod yazmaya odaklıyım. AB vatandaşıyım (EMEA çalışma izni), uzaktan ve uluslararası fırsatlara açığım.</p>
+    <div class="sec-head reveal"><h2 data-en="Summary" data-de="Zusammenfassung">Özet</h2><span class="eyebrow">Summary</span></div>
+    <p class="lead-text reveal" data-en="An iOS developer who builds and scales production-grade mobile apps with Swift, UIKit and SwiftUI. Strong in MVVM architecture, asynchronous programming, multithreading and data persistence. I can own a feature end to end — from architecture decisions to API integration, from performance optimization to refactoring legacy code. Focused on writing scalable, maintainable and testable code. EU citizen (EMEA work authorization), open to remote and international opportunities." data-de="Ein iOS-Entwickler, der produktionsreife mobile Apps mit Swift, UIKit und SwiftUI baut und skaliert. Stark in MVVM-Architektur, asynchroner Programmierung, Multithreading und Datenpersistenz. Ich verantworte ein Feature von Anfang bis Ende – von Architekturentscheidungen über API-Integration bis hin zu Performance-Optimierung und dem Refactoring von Legacy-Code. Fokussiert auf skalierbaren, wartbaren und testbaren Code. EU-Bürger (EMEA-Arbeitserlaubnis), offen für Remote- und internationale Möglichkeiten.">Swift, UIKit ve SwiftUI ile üretim seviyesinde mobil uygulamalar geliştiren ve ölçekleyen bir iOS geliştiricisiyim. MVVM mimarisi, asenkron programlama, çoklu iş parçacığı (multithreading) ve veri kalıcılığı konularında güçlüyüm. Bir özelliği mimari kararlardan API entegrasyonuna, performans optimizasyonundan legacy kod refaktörüne kadar uçtan uca sahiplenebiliyorum. Ölçeklenebilir, sürdürülebilir ve test edilebilir kod yazmaya odaklıyım. AB vatandaşıyım (EMEA çalışma izni), uzaktan ve uluslararası fırsatlara açığım.</p>
   </section>
 
   <!-- ===== EXPERIENCE ===== -->
   <section class="sec wrap">
-    <div class="sec-head reveal"><h2>Deneyim</h2><span class="eyebrow">Experience</span></div>
+    <div class="sec-head reveal"><h2 data-en="Experience" data-de="Erfahrung">Deneyim</h2><span class="eyebrow">Experience</span></div>
     <div class="timeline">
       <div class="job reveal">
-        <div class="job-head"><h3>iOS Developer</h3><span class="when">Şub 2025 — May 2026</span></div>
-        <div class="where">Vero Digital Solutions OOD · Sofya (Remote)</div>
+        <div class="job-head"><h3>iOS Developer</h3><span class="when" data-en="Feb 2025 — May 2026" data-de="Feb. 2025 — Mai 2026">Şub 2025 — May 2026</span></div>
+        <div class="where" data-en="Vero Digital Solutions OOD · Sofia (Remote)" data-de="Vero Digital Solutions OOD · Sofia (Remote)">Vero Digital Solutions OOD · Sofya (Remote)</div>
         <ul>
-          <li>Yüksek öncelikli production hatalarını araştırıp çözdüm; uygulama kararlılığını artırıp çökme oranını düşürdüm.</li>
-          <li>Ürün gereksinimleri ve müşteri ihtiyaçlarına göre yeni özellikler geliştirip entegre ettim.</li>
-          <li>RESTful API entegrasyonları ve asenkron ağ operasyonlarını yönettim.</li>
-          <li>CoreData ve CoreStore ile yerel veri kalıcılığını yönettim.</li>
-          <li>Race condition ve UI bloklanmasını önlemek için multithreading akışlarını iyileştirdim.</li>
-          <li>Legacy kodu daha modüler ve sürdürülebilir MVVM yapısına refaktör ettim.</li>
+          <li data-en="Investigated and resolved high-priority production bugs; improved app stability and reduced crash rates." data-de="Untersuchte und behob Produktionsfehler mit hoher Priorität; verbesserte die App-Stabilität und senkte die Absturzrate.">Yüksek öncelikli production hatalarını araştırıp çözdüm; uygulama kararlılığını artırıp çökme oranını düşürdüm.</li>
+          <li data-en="Developed and integrated new features based on product requirements and client needs." data-de="Entwickelte und integrierte neue Funktionen basierend auf Produktanforderungen und Kundenwünschen.">Ürün gereksinimleri ve müşteri ihtiyaçlarına göre yeni özellikler geliştirip entegre ettim.</li>
+          <li data-en="Implemented RESTful API integrations and handled asynchronous network operations." data-de="Implementierte RESTful-API-Integrationen und verwaltete asynchrone Netzwerkoperationen.">RESTful API entegrasyonları ve asenkron ağ operasyonlarını yönettim.</li>
+          <li data-en="Managed local data persistence with CoreData and CoreStore." data-de="Verwaltete lokale Datenpersistenz mit CoreData und CoreStore.">CoreData ve CoreStore ile yerel veri kalıcılığını yönettim.</li>
+          <li data-en="Improved multithreading flows to prevent race conditions and UI blocking." data-de="Verbesserte Multithreading-Abläufe, um Race Conditions und UI-Blockaden zu vermeiden.">Race condition ve UI bloklanmasını önlemek için multithreading akışlarını iyileştirdim.</li>
+          <li data-en="Refactored legacy code into a more modular and maintainable MVVM structure." data-de="Refaktorierte Legacy-Code in eine modularere und wartbarere MVVM-Struktur.">Legacy kodu daha modüler ve sürdürülebilir MVVM yapısına refaktör ettim.</li>
         </ul>
         <div class="stack">Swift · UIKit · SwiftUI · MVVM · CoreData · CoreStore · REST API · GCD · GitLab</div>
       </div>
 
       <div class="job reveal">
-        <div class="job-head"><h3>Software Developer</h3><span class="when">Eki 2022 — Ara 2024</span></div>
+        <div class="job-head"><h3>Software Developer</h3><span class="when" data-en="Oct 2022 — Dec 2024" data-de="Okt. 2022 — Dez. 2024">Eki 2022 — Ara 2024</span></div>
         <div class="where">Car4Future Technologies</div>
         <ul>
-          <li>iOS uygulamasını sıfırdan geliştirdim (SwiftUI + UIKit): konum tabanlı istasyon arama, BLE şarj kontrolü ve ödeme entegrasyonu.</li>
-          <li>CarPlay ve Apple Watch uzantıları geliştirdim.</li>
-          <li>Firebase ile kimlik doğrulama, gerçek zamanlı veri senkronizasyonu ve analitik entegre ettim.</li>
-          <li>Şarj cihazı iletişimi için CoreBluetooth yönettim; bellek kullanımını optimize ederek %30 performans kazancı sağladım.</li>
+          <li data-en="Built an iOS app from scratch (SwiftUI + UIKit): location-based station search, BLE charger control and payment integration." data-de="Entwickelte eine iOS-App von Grund auf (SwiftUI + UIKit): standortbasierte Stationssuche, BLE-Ladesteuerung und Zahlungsintegration.">iOS uygulamasını sıfırdan geliştirdim (SwiftUI + UIKit): konum tabanlı istasyon arama, BLE şarj kontrolü ve ödeme entegrasyonu.</li>
+          <li data-en="Developed CarPlay and Apple Watch extensions." data-de="Entwickelte CarPlay- und Apple-Watch-Erweiterungen.">CarPlay ve Apple Watch uzantıları geliştirdim.</li>
+          <li data-en="Integrated Firebase for authentication, real-time data sync and analytics." data-de="Integrierte Firebase für Authentifizierung, Echtzeit-Datensynchronisation und Analytics.">Firebase ile kimlik doğrulama, gerçek zamanlı veri senkronizasyonu ve analitik entegre ettim.</li>
+          <li data-en="Managed CoreBluetooth for charger communication; optimized memory usage for a 30% performance gain." data-de="Verwaltete CoreBluetooth für die Ladegerät-Kommunikation; optimierte die Speichernutzung für 30% mehr Performance.">Şarj cihazı iletişimi için CoreBluetooth yönettim; bellek kullanımını optimize ederek %30 performans kazancı sağladım.</li>
         </ul>
         <div class="stack">Firebase · UIKit · Mapbox · REST API · Lottie · BLE (Bluetooth Low Energy)</div>
       </div>
@@ -97,27 +104,27 @@
 
   <!-- ===== PROJECTS ===== -->
   <section class="sec wrap">
-    <div class="sec-head reveal"><h2>Projeler</h2><span class="eyebrow">Projects</span></div>
+    <div class="sec-head reveal"><h2 data-en="Projects" data-de="Projekte">Projeler</h2><span class="eyebrow">Projects</span></div>
     <div class="timeline">
       <div class="job reveal">
         <div class="job-head"><h3>Car4Future: Smart City</h3></div>
-        <div class="where">Elektrikli araç kullanıcıları için komple bir ekosistem</div>
+        <div class="where" data-en="A complete ecosystem for electric-vehicle users" data-de="Ein komplettes Ökosystem für Elektrofahrzeug-Nutzer">Elektrikli araç kullanıcıları için komple bir ekosistem</div>
         <ul>
-          <li>iOS uygulamasını sıfırdan, temiz MVVM mimarisiyle SwiftUI + UIKit kullanarak geliştirdim.</li>
-          <li>Kimlik doğrulama, konum servisleri, ödeme sistemi ve BLE yönetimi.</li>
-          <li>Apple ekosisteminde kullanımı genişletmek için CarPlay ve Apple Watch uzantıları kurup optimize ettim.</li>
+          <li data-en="Built the iOS app from scratch with a clean MVVM architecture using SwiftUI + UIKit." data-de="Entwickelte die iOS-App von Grund auf mit sauberer MVVM-Architektur mit SwiftUI + UIKit.">iOS uygulamasını sıfırdan, temiz MVVM mimarisiyle SwiftUI + UIKit kullanarak geliştirdim.</li>
+          <li data-en="Authentication, location services, payment system and BLE management." data-de="Authentifizierung, Standortdienste, Zahlungssystem und BLE-Verwaltung.">Kimlik doğrulama, konum servisleri, ödeme sistemi ve BLE yönetimi.</li>
+          <li data-en="Built and optimized CarPlay and Apple Watch extensions to extend usability across the Apple ecosystem." data-de="Erstellte und optimierte CarPlay- und Apple-Watch-Erweiterungen, um die Nutzung im Apple-Ökosystem zu erweitern.">Apple ekosisteminde kullanımı genişletmek için CarPlay ve Apple Watch uzantıları kurup optimize ettim.</li>
         </ul>
         <div class="stack">Swift · UIKit · SwiftUI · Firebase · Mapbox · REST API · CoreBluetooth · CarPlay · WatchKit</div>
       </div>
 
       <div class="job reveal">
         <div class="job-head"><h3>BauBuddy App</h3></div>
-        <div class="where">Vero Digital Solutions · saha ekipleri için zaman & iş emri takibi</div>
+        <div class="where" data-en="Vero Digital Solutions · time &amp; work-order tracking for field teams" data-de="Vero Digital Solutions · Zeit- &amp; Auftragserfassung für Außendienstteams">Vero Digital Solutions · saha ekipleri için zaman &amp; iş emri takibi</div>
         <ul>
-          <li>İş emri başına çalışma, seyahat ve mola süresini kaydeden sağlam zaman takibi modülleri geliştirdim.</li>
-          <li>Takip edilen saatleri işlerle ilişkilendiren proje/görev atama mantığı entegre ettim.</li>
-          <li>Çevrimdışı veri girişi ve ağ geldiğinde senkronizasyon sağladım.</li>
-          <li>MVVM ve CoreData tabanlı verimli yerel kalıcılıkla yapılandırdım.</li>
+          <li data-en="Developed robust time-tracking modules that record working, travel and break time per work order." data-de="Entwickelte robuste Zeiterfassungsmodule, die Arbeits-, Reise- und Pausenzeit pro Auftrag erfassen.">İş emri başına çalışma, seyahat ve mola süresini kaydeden sağlam zaman takibi modülleri geliştirdim.</li>
+          <li data-en="Integrated project/task assignment logic that ties tracked hours to specific jobs." data-de="Integrierte Projekt-/Aufgabenzuweisungslogik, die erfasste Stunden bestimmten Aufträgen zuordnet.">Takip edilen saatleri işlerle ilişkilendiren proje/görev atama mantığı entegre ettim.</li>
+          <li data-en="Enabled offline data entry with synchronization once the network is available." data-de="Ermöglichte Offline-Dateneingabe mit Synchronisation, sobald das Netzwerk verfügbar ist.">Çevrimdışı veri girişi ve ağ geldiğinde senkronizasyon sağladım.</li>
+          <li data-en="Structured it with MVVM and efficient CoreData-based local persistence." data-de="Strukturierte es mit MVVM und effizienter CoreData-basierter lokaler Persistenz.">MVVM ve CoreData tabanlı verimli yerel kalıcılıkla yapılandırdım.</li>
         </ul>
         <div class="stack">Swift · UIKit/SwiftUI · MVVM · CoreData · Offline-first senkronizasyon</div>
       </div>
@@ -126,39 +133,40 @@
 
   <!-- ===== EDUCATION ===== -->
   <section class="sec wrap">
-    <div class="sec-head reveal"><h2>Eğitim</h2><span class="eyebrow">Education</span></div>
+    <div class="sec-head reveal"><h2 data-en="Education" data-de="Ausbildung">Eğitim</h2><span class="eyebrow">Education</span></div>
     <div class="timeline">
       <div class="job reveal">
-        <div class="job-head"><h3>Matematik, Lisans (BSc)</h3><span class="when">2015 — 2022</span></div>
-        <div class="where">İzmir Yüksek Teknoloji Enstitüsü (IZTECH), İzmir</div>
+        <div class="job-head"><h3 data-en="Mathematics, BSc" data-de="Mathematik, B.Sc.">Matematik, Lisans (BSc)</h3><span class="when">2015 — 2022</span></div>
+        <div class="where" data-en="Izmir Institute of Technology (IZTECH), Izmir" data-de="Izmir Institute of Technology (IZTECH), Izmir">İzmir Yüksek Teknoloji Enstitüsü (IZTECH), İzmir</div>
       </div>
     </div>
   </section>
 
   <!-- ===== SKILLS ===== -->
   <section class="sec wrap">
-    <div class="sec-head reveal"><h2>Yetenekler</h2><span class="eyebrow">Skills</span></div>
+    <div class="sec-head reveal"><h2 data-en="Skills" data-de="Kenntnisse">Yetenekler</h2><span class="eyebrow">Skills</span></div>
     <div class="chips reveal">
       <span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">UIKit</span>
       <span class="chip">MVVM</span><span class="chip">CoreData</span><span class="chip">CoreStore</span>
       <span class="chip">CoreBluetooth / BLE</span><span class="chip">Firebase</span><span class="chip">REST API</span>
       <span class="chip">Mapbox</span><span class="chip">GCD / Multithreading</span><span class="chip">CarPlay</span>
       <span class="chip">WatchKit</span><span class="chip">Lottie</span><span class="chip">Git / GitLab</span>
-      <span class="chip">Offline-first</span>
+      <span class="chip" data-en="Offline-first" data-de="Offline-first">Offline-first</span>
     </div>
   </section>
 
   <!-- ===== CTA ===== -->
   <section class="cta-band wrap">
-    <h2 class="reveal">Birlikte çalışalım mı?</h2>
+    <h2 class="reveal" data-en="Shall we work together?" data-de="Sollen wir zusammenarbeiten?">Birlikte çalışalım mı?</h2>
     <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="Cv/Ekin_Emre_Atasoy_CV.pdf" download class="btn btn-primary">CV'yi indir ↓</a>
-      <a href="mailto:ekin-atasoy@hotmail.com" class="btn btn-ghost">E-posta gönder</a>
+      <a href="Cv/Ekin_Emre_Atasoy_CV.pdf" download class="btn btn-primary" data-en="Download CV ↓" data-de="Lebenslauf herunterladen ↓">CV'yi indir ↓</a>
+      <a href="mailto:ekin-atasoy@hotmail.com" class="btn btn-ghost" data-en="Send an email" data-de="E-Mail senden">E-posta gönder</a>
     </div>
   </section>
 </main>
 
-<footer>© <span id="yr"></span> Ekin Atasoy · <a href="index.html" style="color:var(--accent)">Portföye dön</a></footer>
+<footer>© <span id="yr"></span> Ekin Atasoy · <a href="index.html" style="color:var(--accent)" data-en="Back to portfolio" data-de="Zum Portfolio">Portföye dön</a></footer>
 <script src="app.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>

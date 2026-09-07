@@ -35,7 +35,12 @@ img{max-width:100%;display:block}
 /* ---- header ---- */
 header{position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);
   background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.nav-right{display:flex;align-items:center;gap:22px}
+.lang{display:flex;gap:1px;font-family:var(--mono);font-size:12px;flex:none}
+.lang button{background:none;border:none;cursor:pointer;color:var(--muted);padding:4px 7px;border-radius:6px;font:inherit;letter-spacing:.04em;transition:color .2s,background .2s}
+.lang button:hover{color:var(--ink)}
+.lang button.active{color:var(--accent);font-weight:700}
 .brand{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
 .brand img{width:30px;height:30px;border-radius:8px}
 .nav-links{display:flex;gap:28px;font-size:14px;font-weight:500}
