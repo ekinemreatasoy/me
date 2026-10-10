@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Little Pages: Journal — pregnancy journal &amp; baby memory book | Ekin Atasoy" data-de="Little Pages: Journal — Schwangerschaftstagebuch &amp; Baby-Erinnerungsbuch | Ekin Atasoy">Minik Sayfalar: Günlük — hamilelik günlüğü ve bebek anı defteri | Ekin Atasoy</title>
+<meta name="description" content="Her güne bir sayfa: hamileliğini ve bebeğinin ilk yılını yaz, fotoğraf ve sesle süsle, kendi kitabına dönüştür. Hesap yok, reklam yok, anıların yalnızca telefonunda.">
+<meta name="keywords" content="hamilelik günlüğü, bebek günlüğü, anı defteri, bebek anıları, pregnancy journal, baby book, memory book">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --accent:#b04a34 }   /* kil kırmızısı */
+
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .value{border-top:2px solid var(--accent);padding-top:16px}
+  .value h3{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em;margin-bottom:6px}
+  .value p{font-size:14.5px;color:var(--muted)}
+
+  .trust{background:var(--accent);color:var(--bg);border-radius:26px;padding:clamp(30px,6vw,64px)}
+  .trust .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+  .trust h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,5.5vw,54px);letter-spacing:-.02em;line-height:1.05;margin:12px 0 30px}
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 30px}
+  .trust-grid b{display:block;font-family:var(--display);font-weight:600;font-size:19px;color:#f6d98a;margin-bottom:4px}
+  .trust-grid span{font-size:15px;line-height:1.55}
+  .trust-links{margin-top:34px;font-family:var(--mono);font-size:12.5px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  .trust-links a{border-bottom:1px solid rgba(251,248,241,.55)}
+
+  .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px 26px}
+  .plan.pro{border-color:var(--accent);box-shadow:0 18px 40px -26px color-mix(in srgb,var(--accent) 60%,transparent)}
+  .plan h3{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:-.01em}
+  .plan .sub{font-family:var(--mono);font-size:12px;color:var(--accent);margin:4px 0 16px}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .plan li{position:relative;padding-left:24px;font-size:15px;color:var(--muted)}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .plan .note{margin-top:18px;font-size:13.5px;color:var(--muted)}
+  .plans-foot{text-align:center;margin-top:22px;font-size:14.5px;color:var(--muted)}
+
+  .faq details{border-top:1px solid var(--line);padding:18px 4px}
+  .faq details:last-child{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+    font-family:var(--display);font-weight:600;font-size:19px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:var(--mono);color:var(--accent);font-size:24px;line-height:1;transition:transform .2s;flex:none}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{margin-top:12px;color:var(--muted);font-size:15.5px;max-width:64ch}
+
+  .detail-hero .phone{margin:44px auto 0}
+
+  @media(max-width:860px){ .trust-grid{grid-template-columns:repeat(2,1fr)} }
+  @media(max-width:700px){ .values,.plans{grid-template-columns:1fr} }
+  @media(max-width:560px){ .trust-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img src="assets/little_pages/icon.png" alt="" onerror="this.remove()"><span data-en="Little Pages" data-de="Little Pages">Minik Sayfalar</span></a>
+    <div class="nav-right">
+      <a href="index.html" class="back" data-en="← Portfolio" data-de="← Portfolio">← Portföy</a>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button data-lang="tr" type="button">TR</button>
+        <button data-lang="en" type="button">EN</button>
+        <button data-lang="de" type="button">DE</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="detail-hero wrap stagger">
+    <!-- ikon: assets/little_pages/icon.png eklenince yer tutucunun üstüne biner (başka işlem gerekmez) -->
+    <div class="app-icon-lg ph-icon reveal" style="--i:0">M<img class="ovl" src="assets/little_pages/icon.png" alt="Minik Sayfalar uygulama ikonu" onerror="this.remove()"></div>
+    <div class="reveal" style="--i:1"><span class="eyebrow" data-en="iOS App · Pregnancy &amp; Baby Memory Book" data-de="iOS-App · Schwangerschafts- &amp; Baby-Erinnerungsbuch">iOS Uygulaması · Hamilelik &amp; Bebek Anı Defteri</span></div>
+    <h1 class="tagline reveal" style="--i:2" data-en="A page for every day." data-de="Jeden Tag eine Seite.">Her güne bir sayfa.</h1>
+    <p class="lead reveal" style="--i:3" data-en="Little Pages is a calm notebook where an expecting or new mother spends one minute a day writing. Pages decorated with photos, voice notes and stickers grow into a calendar, a timeline of special days and, when you want, a printable PDF book. No account, no ads, no tracking: everything stays on your phone." data-de="Little Pages (auf Türkisch „Minik Sayfalar“) ist ein ruhiges Notizbuch, in das werdende und frischgebackene Mütter jeden Tag eine Minute schreiben. Die mit Fotos, Sprachnotizen und Stickern gestalteten Seiten werden mit der Zeit zu einem Kalender, einer Zeitleiste besonderer Tage und – wenn du möchtest – zu einem druckbaren PDF-Buch. Kein Konto, keine Werbung, kein Tracking: alles bleibt nur auf deinem Telefon.">Minik Sayfalar, bir anne adayının ya da yeni annenin her gün bir dakikasını ayırıp yazdığı sakin bir defter. Fotoğraf, sesli not ve çıkartmalarla süslenen sayfalar zamanla takvime, özel günler çizgisine ve istendiğinde basılabilir bir PDF kitaba dönüşür. Hesap yok, reklam yok, takip yok: her şey yalnızca senin telefonunda.</p>
+    <div class="detail-cta reveal" style="--i:4">
+      <!-- DÜZENLE: yayınlanınca <span class="store-badge soon"> → <a href="APP_STORE_LINKI" target="_blank" rel="noopener" class="store-badge"> yap, .soon-note satırlarını sil (hero + sayfa sonu) -->
+      <span class="store-badge soon"><img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store — çok yakında"></span>
+    </div>
+    <div class="soon-note reveal" style="--i:5" data-en="Coming soon on the App Store" data-de="Bald im App Store">Çok yakında App Store'da</div>
+    <div class="privacy-links reveal" style="--i:6">
+      <a class="only-tr" href="privacy/little_pages/gizlilik-politikasi.html">Gizlilik Politikası</a>
+      <a class="only-en" href="privacy/little_pages/privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz (Englisch)">Privacy Policy</a>
+      <a class="only-tr" href="privacy/little_pages/kullanim-kosullari.html">Kullanım Koşulları</a>
+      <a class="only-en" href="privacy/little_pages/terms-of-use.html" data-en="Terms of Use" data-de="Nutzungsbedingungen (Englisch)">Terms of Use</a>
+    </div>
+    <div class="phone reveal" style="--i:7"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/1.png</span></div><img class="ovl" src="assets/little_pages/1.png" alt="Minik Sayfalar — Her gün bir sayfa" onerror="this.remove()"></div></div>
+  </section>
+
+  <!-- ===== ÜÇ KISA DEĞER ===== -->
+  <section class="wrap" style="padding-block:20px 10px">
+    <div class="values">
+      <div class="value reveal"><h3 data-en="One page a day" data-de="Jeden Tag eine Seite">Her gün bir sayfa</h3><p data-en="A small question; one sentence is enough." data-de="Eine kleine Frage, ein Satz genügt.">Küçük bir soru, bir cümle yeter.</p></div>
+      <div class="value reveal"><h3 data-en="Your own book" data-de="Dein eigenes Buch">Kendi kitabın</h3><p data-en="Your pages turn into a PDF book with one tap." data-de="Deine Seiten werden mit einem Fingertipp zum PDF-Buch.">Sayfaların tek dokunuşla PDF kitaba dönüşür.</p></div>
+      <div class="value reveal"><h3 data-en="Your memories stay with you" data-de="Deine Erinnerungen bleiben bei dir">Anıların yalnızca sende</h3><p data-en="No account; everything stays on your phone." data-de="Kein Konto, alles bleibt auf deinem Telefon.">Hesap yok, her şey telefonunda.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== EKRANLAR ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="Screens from the app" data-de="Einblicke in die App">Uygulamadan kareler</h2><span class="eyebrow" data-en="Screens" data-de="Screenshots">Ekranlar</span></div>
+    <!-- görseller: assets/little_pages/1.png … 6.png (eklenince yer tutucunun üstüne biner) -->
+    <div class="shots">
+      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/1.png</span></div><img class="ovl" src="assets/little_pages/1.png" alt="Minik Sayfalar — Bugün" onerror="this.remove()"></div></div><figcaption><b data-en="A page every day" data-de="Jeden Tag eine Seite">Her gün bir sayfa</b><span data-en="Today" data-de="Heute">Bugün</span></figcaption></figure>
+      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/2.png</span></div><img class="ovl" src="assets/little_pages/2.png" alt="Minik Sayfalar — Editör" onerror="this.remove()"></div></div><figcaption><b data-en="Decorate your memories" data-de="Gestalte deine Erinnerungen">Anılarını süsle</b><span data-en="Editor" data-de="Editor">Editör</span></figcaption></figure>
+      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/3.png</span></div><img class="ovl" src="assets/little_pages/3.png" alt="Minik Sayfalar — Takvim ve özel günler" onerror="this.remove()"></div></div><figcaption><b data-en="See your special days together" data-de="Alle besonderen Tage auf einen Blick">Özel günlerini bir arada gör</b><span data-en="Calendar &amp; special days" data-de="Kalender &amp; besondere Tage">Takvim ve özel günler</span></figcaption></figure>
+      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/4.png</span></div><img class="ovl" src="assets/little_pages/4.png" alt="Minik Sayfalar — Kitap önizleme" onerror="this.remove()"></div></div><figcaption><b data-en="Let your pages become your own book" data-de="Aus deinen Seiten wird dein eigenes Buch">Sayfaların kendi kitabına dönüşsün</b><span data-en="Book preview" data-de="Buchvorschau">Kitap önizleme</span></figcaption></figure>
+      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/5.png</span></div><img class="ovl" src="assets/little_pages/5.png" alt="Minik Sayfalar — Yazı tipi ve kâğıt" onerror="this.remove()"></div></div><figcaption><b data-en="Your handwriting, your paper" data-de="Deine Handschrift, dein Papier">Senin el yazın, senin kâğıdın</b><span data-en="Handwriting &amp; paper" data-de="Schrift &amp; Papier">Yazı tipi ve kâğıt</span></figcaption></figure>
+      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/6.png</span></div><img class="ovl" src="assets/little_pages/6.png" alt="Minik Sayfalar — Gizlilik" onerror="this.remove()"></div></div><figcaption><b data-en="Your memories stay with you" data-de="Deine Erinnerungen bleiben bei dir">Anıların yalnızca sende</b><span data-en="Privacy" data-de="Datenschutz">Gizlilik</span></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ===== ÜCRETSİZ ÖZELLİKLER ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="What's free" data-de="Das ist kostenlos">Ücretsiz olanlar</h2><span class="eyebrow" data-en="Features" data-de="Funktionen">Özellikler</span></div>
+    <div class="features">
+      <div class="feat reveal"><div class="fic">✍️</div><h3 data-en="One page a day" data-de="Jeden Tag eine Seite">Her gün bir sayfa</h3><p data-en="Today's small question makes starting easy; a single sentence is enough. 60 questions, 10 mood faces and writing for past days. Reminders are gentle and pressure-free, and can use a neutral wording that never mentions the baby. No streaks, no penalty for a missed day." data-de="Die kleine Frage des Tages erleichtert den Anfang; ein Satz genügt. 60 Fragen, 10 Stimmungsgesichter und Einträge für vergangene Tage. Erinnerungen sind sanft und ohne Druck – auf Wunsch mit neutralem Text, der das Baby nie erwähnt. Keine Serien, keine Strafe für verpasste Tage.">Bugünün küçük sorusu yazmaya başlamayı kolaylaştırır; bir cümle de yeter. 60 soru, 10 ruh hali yüzü ve geçmişe dönük yazma. Hatırlatmalar nazik ve baskısızdır; istersen bebekten hiç söz etmeyen nötr bir metinle gelir. Seri ya da kaçırılan gün cezası yok.</p></div>
+      <div class="feat reveal"><div class="fic">🍓</div><h3 data-en="Pregnancy, week by week" data-de="Schwangerschaft, Woche für Woche">Hafta hafta hamilelik</h3><p data-en="See which week you're in, how many days are left and roughly which fruit or vegetable your baby's size matches this week (weeks 4–40, each a small hand-drawn illustration; a fun comparison, not medical information). After the birth, switch to baby mode with one tap." data-de="Sieh, in welcher Woche du bist, wie viele Tage noch fehlen und welcher Frucht oder welchem Gemüse die Größe deines Babys diese Woche ungefähr entspricht (Woche 4–40, jeweils eine kleine handgezeichnete Illustration; ein spielerischer Vergleich, keine medizinische Information). Nach der Geburt wechselst du mit einem Fingertipp in den Babymodus.">Kaçıncı haftada olduğunu, kaç gün kaldığını ve bebeğin bu hafta yaklaşık hangi meyve ya da sebze boyunda olduğunu gör (hafta 4–40, her biri elle çizilmiş küçük bir illüstrasyon; eğlence amaçlı bir kıyas, tıbbi bilgi değil). Doğum olunca tek dokunuşla bebek moduna geçilir.</p></div>
+      <div class="feat reveal"><div class="fic">🎉</div><h3 data-en="Special days" data-de="Besondere Tage">Özel günler</h3><p data-en="19 kinds of special days: positive test, first ultrasound, heartbeat, first kick, birth, first smile, first tooth, first steps, first word, first birthday, your own special day and more. Marked pages gather on a timeline, including the due date and a “today” line. If you just want a journal, pregnancy and baby special days stay hidden." data-de="19 Arten besonderer Tage: positiver Test, erster Ultraschall, Herzschlag, erster Tritt, Geburt, erstes Lächeln, erster Zahn, erste Schritte, erstes Wort, erster Geburtstag, dein eigener besonderer Tag und mehr. Markierte Seiten sammeln sich auf einer Zeitleiste, mit Geburtstermin und „Heute“-Linie. Wenn du nur Tagebuch führen möchtest, werden Schwangerschafts- und Baby-Tage nicht angezeigt.">19 özel gün türü: pozitif test, ilk ultrason, kalp atışı, ilk tekme, doğum, ilk gülümseme, ilk diş, ilk adım, ilk kelime, ilk yaş, kendi özel günün ve daha fazlası. İşaretlenen sayfalar, tahmini doğum tarihi ve “bugün” çizgisiyle birlikte bir zaman çizelgesinde toplanır. “Sadece günlük tutmak istiyorum” dersen hamilelik ya da bebek özel günleri gösterilmez.</p></div>
+      <div class="feat reveal"><div class="fic">🔎</div><h3 data-en="Calendar &amp; search" data-de="Kalender &amp; Suche">Takvim ve arama</h3><p data-en="A month view, a 40-week view and a special-days timeline. Search by word, even without typing accents (“gunes” → “güneş”); filter by tag and mood." data-de="Monatsansicht, 40-Wochen-Ansicht und eine Zeitleiste besonderer Tage. Wortsuche – auch ohne Akzente („gunes“ → „güneş“); Filter nach Tags und Stimmung.">Ay görünümü, 40 haftalık görünüm ve özel günler zaman çizelgesi. Kelimeyle arama aksan yazmadan bile bulur (“gunes” → “güneş”); etiket ve ruh haline göre süzme.</p></div>
+      <div class="feat reveal"><div class="fic">🏅</div><h3 data-en="Badges" data-de="Abzeichen">Rozetler</h3><p data-en="Counts what you did, not streaks: 10 / 30 / 100 pages, first photo, first book, all three trimesters." data-de="Zählt, was du getan hast – keine Serien: 10 / 30 / 100 Seiten, erstes Foto, erstes Buch, alle drei Trimester.">Yaptığını sayar, seri saymaz: 10 / 30 / 100 sayfa, ilk fotoğraf, ilk kitap, üç trimester.</p></div>
+      <div class="feat reveal"><div class="fic">🔒</div><h3 data-en="Backup &amp; security" data-de="Sicherung &amp; Sicherheit">Yedek ve güvenlik</h3><p data-en="“Back up my pages” gives you a single ZIP file; it restores onto another phone without creating duplicates. App lock with Face ID or a passcode. Even without Pro no page is ever locked: read, search and back up as you like." data-de="„Meine Seiten sichern“ liefert eine einzelne ZIP-Datei; sie lässt sich auf einem anderen Telefon wiederherstellen, ohne Duplikate. App-Sperre mit Face ID oder Code. Auch ohne Pro wird keine Seite gesperrt: lesen, suchen, sichern.">“Sayfalarımı yedekle” tek bir ZIP dosyası verir; başka telefona geri yüklenir ve çift kayıt yapmaz. Face ID ya da parola ile uygulama kilidi. Pro olmasan da hiçbir sayfa kilitlenmez: okunur, aranır, yedeklenir.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== PRO ÖZELLİKLER ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="Decorate your pages, make your book" data-de="Gestalte deine Seiten, mach dein Buch">Sayfanı süsle, kitabını yap</h2><span class="eyebrow">Pro</span></div>
+    <div class="features">
+      <div class="feat reveal"><div class="fic">📸</div><h3 data-en="Instant-style photos" data-de="Sofortbild-Fotos">Çerçeveli fotoğraflar</h3><p data-en="Up to 4 photos per page in white-bordered instant-style frames: captioned, slightly tilted, held with washi tape. 1 × 4 or 2 × 2 layout." data-de="Bis zu 4 Fotos pro Seite im weißen Sofortbild-Rahmen: mit Bildunterschrift, leicht schräg, mit Washi-Tape befestigt. Anordnung 1 × 4 oder 2 × 2.">Sayfa başına 4'e kadar fotoğraf; beyaz çerçeveli, alt yazılı, hafif eğimli ve washi bantla tutturulmuş. 1 × 4 ya da 2 × 2 yerleşim.</p></div>
+      <div class="feat reveal"><div class="fic">🎙️</div><h3 data-en="Voice notes" data-de="Sprachnotizen">Sesli notlar</h3><p data-en="A heartbeat, a first laugh, your own voice. 3 per page, up to 5 minutes each." data-de="Ein Herzschlag, das erste Lachen, deine eigene Stimme. 3 pro Seite, je bis zu 5 Minuten.">Kalp atışı, ilk kahkaha, kendi sesin. Sayfa başına 3, her biri 5 dakikaya kadar.</p></div>
+      <div class="feat reveal"><div class="fic">🌟</div><h3 data-en="Stickers" data-de="Sticker">Çıkartmalar</h3><p data-en="Fruits, hearts, frames, paper clips, pins, washi tapes — even stickers cut out of your own photos with the background removed automatically. 3 per page." data-de="Früchte, Herzen, Rahmen, Büroklammern, Reißzwecken, Washi-Tapes – sogar Sticker aus deinen eigenen Fotos, deren Hintergrund automatisch entfernt wird. 3 pro Seite.">Meyveler, kalpler, çerçeveler, ataşlar, raptiyeler, washi bantlar; hatta kendi fotoğraflarından arka planı otomatik silinerek yapılan çıkartmalar. Sayfa başına 3.</p></div>
+      <div class="feat reveal"><div class="fic">🏷️</div><h3 data-en="Tags" data-de="Tags">Etiketler</h3><p data-en="3 tags per page; colorful and searchable. Filter by tag when searching." data-de="3 Tags pro Seite; farbig und durchsuchbar. Beim Suchen nach Tag filtern.">Sayfa başına 3 etiket; renkli ve aranabilir. Aramada etikete göre süzebilirsin.</p></div>
+      <div class="feat reveal"><div class="fic">🎨</div><h3 data-en="Customization" data-de="Anpassung">Özelleştirme</h3><p data-en="11 handwriting fonts (every Turkish character checked), 7 paper colors × lined / grid / dotted textures, 6 accent colors, 4 text sizes and alternate app icons." data-de="11 Handschriften (alle türkischen Sonderzeichen geprüft), 7 Papierfarben × liniert / kariert / gepunktet, 6 Akzentfarben, 4 Schriftgrößen und alternative App-Symbole.">11 el yazısı (Türkçe karakterlerin hepsi doğrulandı), 7 kâğıt rengi × çizgili / kareli / noktalı doku, 6 vurgu rengi, 4 yazı boyutu ve alternatif uygulama ikonları.</p></div>
+      <div class="feat reveal"><div class="fic">📖</div><h3 data-en="Your own book" data-de="Dein eigenes Buch">Kendi kitabın</h3><p data-en="Your pages become a PDF book with one tap: A5, A4 or square; 3 covers; range, month and content options (photos, sounds, mood). Text stays crisp, and even a 300-day book exports comfortably on your phone. Share or print it. Free users can see a preview." data-de="Deine Seiten werden mit einem Fingertipp zum PDF-Buch: A5, A4 oder quadratisch; 3 Cover; Optionen für Zeitraum, Monate und Inhalt (Fotos, Töne, Stimmung). Der Text bleibt gestochen scharf, und selbst ein 300-Tage-Buch entsteht problemlos auf dem Telefon. Teilen oder drucken. Kostenlose Nutzer sehen eine Vorschau.">Sayfalar tek dokunuşla PDF kitaba dönüşür: A5, A4 ya da kare; 3 kapak; aralık, ay ve içerik seçenekleri (fotoğraflar, sesler, ruh hali). Metin keskin kalır; 300 günlük bir kitap bile telefonda rahatça çıkar. Paylaş ya da yazdır. Ücretsiz kullanıcılar önizlemeyi görebilir.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== NEDEN YAPTIM ===== -->
+  <section class="sec wrap" style="padding-block:10px">
+    <div class="callout reveal">
+      <h2 data-en="Why I made it" data-de="Warum ich es gemacht habe">Neden yaptım?</h2>
+      <p data-en="During pregnancy and a baby's first months people live through a lot and write down very little. Most existing apps either behave like a checklist, are full of ads, or lock your memories behind an account." data-de="In der Schwangerschaft und den ersten Babymonaten erlebt man viel und schreibt nur wenig auf. Die meisten Apps verhalten sich entweder wie eine Checkliste, sind voller Werbung oder sperren Erinnerungen hinter einem Konto.">Hamilelikte ve bebeğin ilk aylarında insanlar çok şey yaşar ve çok azını yazabilir. Mevcut uygulamaların çoğu ya bir kontrol listesi gibi davranıyor, ya reklamla dolu, ya da anıları bir hesabın arkasına kilitliyor.</p>
+      <p style="margin-top:14px" data-en="I started Little Pages with one question: “What can a mother write in one minute at the end of the day — and what should those pages be in her hands nine months later?” The answer was three things: a small question that makes it easy to start, a design that makes the page beautiful without pressuring you, and a book you can really keep at the end." data-de="Ich habe Little Pages mit einer Frage begonnen: „Was kann eine Mutter am Ende des Tages in einer Minute schreiben – und was sollten diese Seiten neun Monate später in ihren Händen sein?“ Die Antwort bestand aus drei Dingen: eine kleine Frage, die den Einstieg erleichtert, ein Design, das die Seite verschönert, ohne Druck auszuüben, und am Ende ein Buch, das man wirklich aufbewahren kann.">Minik Sayfalar'ı şu soruyla başlattım: “Bir anne, günün sonunda bir dakikada ne yazabilir; ve dokuz ay sonra bu sayfalar elinde ne olmalı?” Cevap üç şey oldu: yazmaya başlamayı kolaylaştıran küçük bir soru, sayfayı güzelleştiren ama baskı yapmayan bir tasarım ve sonunda gerçekten saklanabilecek bir kitap.</p>
+    </div>
+  </section>
+
+  <!-- ===== GİZLİLİK VE GÜVEN ===== -->
+  <section class="sec wrap">
+    <div class="trust reveal">
+      <div class="kicker" data-en="Privacy &amp; trust" data-de="Datenschutz &amp; Vertrauen">Gizlilik ve güven</div>
+      <h2 data-en="Your memories stay yours." data-de="Deine Erinnerungen gehören nur dir.">Anıların yalnızca sende.</h2>
+      <div class="trust-grid">
+        <div><b data-en="No account." data-de="Kein Konto.">Hesap yok.</b><span data-en="No sign-in, e-mail or password." data-de="Keine Anmeldung, keine E-Mail, kein Passwort.">Giriş yapma, e-posta, şifre yok.</span></div>
+        <div><b data-en="No ads." data-de="Keine Werbung.">Reklam yok.</b><span data-en="Never." data-de="Niemals.">Hiçbir zaman.</span></div>
+        <div><b data-en="No tracking or analytics." data-de="Kein Tracking, keine Analyse.">Takip ve analiz yok.</b><span data-en="No third-party tracking software; no data is collected." data-de="Keine Tracking-Software von Dritten; es werden keine Daten erhoben.">Üçüncü taraf takip yazılımı yok; veri toplanmıyor.</span></div>
+        <div><b data-en="Everything on your device." data-de="Alles auf deinem Gerät.">Her şey cihazda.</b><span data-en="Pages, photos, voice notes and notes are stored only on your phone." data-de="Seiten, Fotos, Sprachnotizen und Notizen werden nur auf deinem Telefon gespeichert.">Sayfalar, fotoğraflar, sesler ve notlar yalnızca telefonunda saklanır.</span></div>
+        <div><b data-en="Try first, then decide." data-de="Erst testen, dann entscheiden.">Önce dene, sonra karar ver.</b><span data-en="You can try every Pro feature before buying; if you don't buy, it goes back as it was." data-de="Du kannst alle Pro-Funktionen vor dem Kauf ausprobieren; kaufst du nicht, wird alles zurückgesetzt.">Pro özelliklerinin hepsini satın almadan önce deneyebilirsin; satın almazsan eski hâline döner.</span></div>
+        <div><b data-en="One-time price." data-de="Einmaliger Preis.">Tek seferlik fiyat.</b><span data-en="No subscription; you pay once." data-de="Kein Abo; du zahlst einmal.">Abonelik yok; bir kez ödersin.</span></div>
+      </div>
+      <div class="trust-links">
+        <span data-en="Full texts:" data-de="Volltexte:">Tam metinler:</span>
+        <a class="only-tr" href="privacy/little_pages/gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a class="only-en" href="privacy/little_pages/privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz (Englisch)">Privacy Policy</a>
+        <a class="only-tr" href="privacy/little_pages/kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a class="only-en" href="privacy/little_pages/terms-of-use.html" data-en="Terms of Use" data-de="Nutzungsbedingungen (Englisch)">Terms of Use</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FİYAT ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="Price" data-de="Preis">Fiyat</h2><span class="eyebrow" data-en="One-time" data-de="Einmalig">Tek seferlik</span></div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3 data-en="Free" data-de="Kostenlos">Ücretsiz</h3>
+        <div class="sub" data-en="Always" data-de="Immer">Her zaman</div>
+        <ul>
+          <li data-en="Daily text pages" data-de="Tägliche Textseiten">Günlük metin sayfaları</li>
+          <li data-en="Mood" data-de="Stimmung">Ruh hali</li>
+          <li data-en="Calendar" data-de="Kalender">Takvim</li>
+          <li data-en="Special days" data-de="Besondere Tage">Özel günler</li>
+          <li data-en="Reminders" data-de="Erinnerungen">Hatırlatmalar</li>
+          <li data-en="App lock" data-de="App-Sperre">Uygulama kilidi</li>
+          <li data-en="Backup" data-de="Sicherung">Yedekleme</li>
+          <li data-en="Badges" data-de="Abzeichen">Rozetler</li>
+        </ul>
+      </div>
+      <div class="plan pro reveal">
+        <h3>Pro</h3>
+        <div class="sub" data-en="One-time purchase" data-de="Einmaliger Kauf">Tek seferlik satın alma</div>
+        <ul>
+          <li data-en="Instant-style photos" data-de="Sofortbild-Fotos">Çerçeveli fotoğraflar</li>
+          <li data-en="Voice notes" data-de="Sprachnotizen">Sesli notlar</li>
+          <li data-en="Stickers" data-de="Sticker">Çıkartmalar</li>
+          <li data-en="Tags" data-de="Tags">Etiketler</li>
+          <li data-en="Customization" data-de="Anpassung">Özelleştirme</li>
+          <li data-en="PDF book" data-de="PDF-Buch">PDF kitap</li>
+        </ul>
+        <p class="note" data-en="The price is shown in the App Store for your country." data-de="Der Preis wird im App Store für dein Land angezeigt.">Fiyat ülkene göre App Store'da gösterilir.</p>
+      </div>
+    </div>
+    <p class="plans-foot reveal" data-en="No subscription. You can try all Pro features in the app before you buy; there is no separate free trial period." data-de="Kein Abo. Du kannst alle Pro-Funktionen vor dem Kauf in der App ausprobieren; eine separate kostenlose Testphase gibt es nicht.">Abonelik yok. Satın almadan önce Pro özelliklerinin hepsini uygulamada deneyebilirsin; ayrı bir ücretsiz deneme süresi yoktur.</p>
+  </section>
+
+  <!-- ===== TASARIM ===== -->
+  <section class="sec wrap" style="padding-top:10px">
+    <div class="sec-head reveal"><h2 data-en="A calm design" data-de="Ein ruhiges Design">Sakin bir tasarım</h2><span class="eyebrow">Design</span></div>
+    <div class="values">
+      <div class="value reveal"><h3 data-en="Warm and calm" data-de="Warm und ruhig">Sıcak ve sakin</h3><p data-en="Like a lovingly drawn notebook page: cream, clay red, sage and butter yellow — far from the cliché pink-and-blue baby world." data-de="Wie eine liebevoll gezeichnete Heftseite: Creme, Tonrot, Salbeigrün und Buttergelb – weit entfernt von der klischeehaften rosa-blauen Babywelt.">Sevgiyle çizilmiş bir defter sayfası gibi: krem, kil kırmızısı, adaçayı ve tereyağı sarısı; klişe pembe-mavi bebek dünyasından uzak.</p></div>
+      <div class="value reveal"><h3 data-en="Readable for everyone" data-de="Für alle gut lesbar">Herkes için okunur</h3><p data-en="Comfortable even at the largest text sizes; dark mode, VoiceOver support and respect for Reduce Motion." data-de="Auch bei der größten Schriftgröße angenehm; Dunkelmodus, VoiceOver-Unterstützung und Rücksicht auf „Bewegung reduzieren“.">En büyük yazı boyutlarında bile rahat; koyu mod, VoiceOver desteği ve Hareketi Azalt'a saygı.</p></div>
+      <div class="value reveal"><h3 data-en="Turkish and English" data-de="Türkisch und Englisch">Türkçe ve İngilizce</h3><p data-en="All texts, notifications and questions in two languages." data-de="Alle Texte, Benachrichtigungen und Fragen in zwei Sprachen.">Tüm metinler, bildirimler ve sorular iki dilde.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== SSS ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="Frequently asked questions" data-de="Häufige Fragen">Sık sorulanlar</h2><span class="eyebrow" data-en="FAQ" data-de="FAQ">SSS</span></div>
+    <div class="faq reveal">
+      <details><summary data-en="Where is my data stored?" data-de="Wo werden meine Daten gespeichert?">Verilerim nerede saklanıyor?</summary><p data-en="Only on your phone. No account is created and nothing is sent to a server." data-de="Nur auf deinem Telefon. Es wird kein Konto angelegt, und nichts wird an einen Server gesendet.">Yalnızca telefonunda. Hesap açılmaz, hiçbir şey sunucuya gönderilmez.</p></details>
+      <details><summary data-en="What if I change phones?" data-de="Was, wenn ich das Telefon wechsle?">Telefonumu değiştirirsem?</summary><p data-en="Use “Back up my pages” to get a ZIP file and restore it on the new phone." data-de="Mit „Meine Seiten sichern“ erhältst du eine ZIP-Datei, die du auf dem neuen Telefon wiederherstellen kannst.">“Sayfalarımı yedekle” ile ZIP dosyası alıp yeni telefonda geri yükleyebilirsin.</p></details>
+      <details><summary data-en="If I don't buy Pro, will my pages disappear?" data-de="Gehen meine Seiten verloren, wenn ich Pro nicht kaufe?">Pro'yu almazsam sayfalarım kaybolur mu?</summary><p data-en="No. Every page stays readable, searchable and backed up. Pro only unlocks creating new photos, voice notes, stickers, tags, customization and the PDF book." data-de="Nein. Jede Seite bleibt les-, such- und sicherbar. Pro schaltet nur das Erstellen neuer Fotos, Sprachnotizen, Sticker, Tags, Anpassungen und des PDF-Buchs frei.">Hayır. Her sayfa okunur, aranır ve yedeklenir. Pro yalnızca yeni fotoğraf, ses, çıkartma, etiket, özelleştirme ve PDF kitap oluşturmayı açar.</p></details>
+      <details><summary data-en="Is it a subscription?" data-de="Ist das ein Abo?">Abonelik mi?</summary><p data-en="No, it's a one-time purchase." data-de="Nein, es ist ein einmaliger Kauf.">Hayır, tek seferlik bir satın alma.</p></details>
+      <details><summary data-en="Can I try it before buying?" data-de="Kann ich es vor dem Kauf ausprobieren?">Satın almadan deneyebilir miyim?</summary><p data-en="Yes. You can try the Pro features inside the app before you buy; whatever you tried goes back if you don't purchase. There is no separate free trial period: Pro is a one-time purchase." data-de="Ja. Du kannst die Pro-Funktionen vor dem Kauf in der App ausprobieren; was du getestet hast, wird zurückgesetzt, wenn du nicht kaufst. Eine separate kostenlose Testphase gibt es nicht: Pro ist ein einmaliger Kauf.">Evet. Pro özelliklerini uygulamanın içinde satın almadan önce deneyebilirsin; denediklerin satın almazsan eski hâline döner. Ayrı bir ücretsiz deneme süresi yoktur: Pro tek seferlik bir satın almadır.</p></details>
+      <details><summary data-en="Is there Family Sharing?" data-de="Gibt es Familienfreigabe?">Aile Paylaşımı var mı?</summary><p data-en="No, each person buys with their own Apple ID." data-de="Nein, jede Person kauft mit der eigenen Apple-ID.">Hayır, her kişi kendi Apple Kimliğiyle alır.</p></details>
+      <details><summary data-en="Does it give medical information?" data-de="Gibt die App medizinische Informationen?">Tıbbi bilgi veriyor mu?</summary><p data-en="No. The weekly size comparisons are approximate and for fun; talk to your doctor for health questions." data-de="Nein. Die wöchentlichen Größenvergleiche sind ungefähr und spielerisch gemeint; bei Gesundheitsfragen wende dich an deine Ärztin oder deinen Arzt.">Hayır. Haftalık boyut karşılaştırmaları yaklaşık ve eğlence amaçlıdır; sağlık için doktoruna danış.</p></details>
+      <details><summary data-en="Which languages?" data-de="Welche Sprachen?">Hangi diller?</summary><p data-en="Turkish and English." data-de="Türkisch und Englisch.">Türkçe ve İngilizce.</p></details>
+      <details><summary data-en="Which devices?" data-de="Welche Geräte?">Hangi cihazlar?</summary><p data-en="iPhone, iOS 26 and later." data-de="iPhone, iOS 26 und neuer.">iPhone, iOS 26 ve üstü.</p></details>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-band wrap">
+    <h2 class="reveal" data-en="Write today's page." data-de="Schreib die heutige Seite.">Bugünkü sayfanı yaz.</h2>
+    <div class="reveal" style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <span class="store-badge soon"><img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store — çok yakında"></span>
+      <span class="soon-note" style="margin-top:0" data-en="Coming soon on the App Store" data-de="Bald im App Store">Çok yakında App Store'da</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="privacy-links" style="margin-bottom:14px">
+    <a class="only-tr" href="privacy/little_pages/gizlilik-politikasi.html">Gizlilik Politikası</a>
+    <a class="only-en" href="privacy/little_pages/privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz (Englisch)">Privacy Policy</a>
+    <a class="only-tr" href="privacy/little_pages/kullanim-kosullari.html">Kullanım Koşulları</a>
+    <a class="only-en" href="privacy/little_pages/terms-of-use.html" data-en="Terms of Use" data-de="Nutzungsbedingungen (Englisch)">Terms of Use</a>
+    <a href="mailto:studyosefo@gmail.com" data-en="Support" data-de="Support">Destek</a>
+  </div>
+  © <span id="yr"></span> <span data-en="Made by Ekin Emre Atasoy" data-de="Entwickelt von Ekin Emre Atasoy">Ekin Emre Atasoy tarafından yapıldı</span> · <a href="index.html" style="color:var(--accent)" data-en="Back to portfolio" data-de="Zum Portfolio">Portföye dön</a>
+</footer>
+<script src="app.js"></script>
+<script src="i18n.js"></script>
+</body>
+</html>

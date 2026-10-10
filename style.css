@@ -38,10 +38,10 @@ header{position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);
 .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
 .nav-right{display:flex;align-items:center;gap:22px}
 .lang{display:flex;gap:1px;font-family:var(--mono);font-size:12px;flex:none}
-.lang button{background:none;border:none;cursor:pointer;color:var(--muted);padding:4px 7px;border-radius:6px;font:inherit;letter-spacing:.04em;transition:color .2s,background .2s}
-.lang button:hover{color:var(--ink)}
-.lang button.active{color:var(--accent);font-weight:700}
-.brand{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.lang button,.lang a{background:none;border:none;cursor:pointer;color:var(--muted);padding:4px 7px;border-radius:6px;font:inherit;letter-spacing:.04em;transition:color .2s,background .2s}
+.lang button:hover,.lang a:hover{color:var(--ink)}
+.lang button.active,.lang a.active{color:var(--accent);font-weight:700}
+.brand{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;white-space:nowrap}
 .brand img{width:30px;height:30px;border-radius:8px}
 .nav-links{display:flex;gap:28px;font-size:14px;font-weight:500}
 .nav-links a{position:relative;color:var(--muted);transition:color .2s}
@@ -112,13 +112,16 @@ footer{text-align:center;font-family:var(--mono);font-size:12px;color:var(--mute
 
 .phone{width:228px;flex:none;position:relative;border-radius:40px;background:#111;padding:9px;
   box-shadow:0 34px 60px -30px rgba(24,20,15,.7),inset 0 0 0 2px #2c2c2c}
-.phone .screen{border-radius:32px;overflow:hidden;aspect-ratio:9/19.5;background:#000}
+.phone .screen{border-radius:32px;overflow:hidden;aspect-ratio:9/19.5;background:#000;position:relative}
 .phone .screen img{width:100%;height:100%;object-fit:cover;object-position:top}
 .phone .island{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:82px;height:24px;background:#000;border-radius:99px;z-index:2}
 
 /* --- görsel gelene kadar placeholder'lar --- */
-.ph-icon{display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:54px;color:#fff;
+.ph-icon{display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:54px;color:#fff;position:relative;
   background:linear-gradient(150deg,var(--accent),color-mix(in srgb,var(--accent) 42%,#0e0e0e))}
+/* yer tutucunun üstüne biner; dosya yoksa onerror ile kalkar, dosya gelince hiçbir şey değiştirmek gerekmez */
+.ovl{position:absolute;inset:0;margin:auto}
+.ph-icon > .ovl,.screen > .ovl{width:100%;height:100%;object-fit:cover;border-radius:inherit}
 .ph-shot{width:100%;height:100%;display:grid;place-items:center;align-content:center;text-align:center;
   background:linear-gradient(160deg,var(--accent),color-mix(in srgb,var(--accent) 34%,#0e0e0e));color:#fff}
 .ph-shot .cam{font-size:30px;opacity:.9}
@@ -162,10 +165,27 @@ footer{text-align:center;font-family:var(--mono);font-size:12px;color:var(--mute
 .cta-band{text-align:center;padding-block:clamp(50px,8vw,90px)}
 .cta-band h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,52px);letter-spacing:-.02em;margin-bottom:24px}
 
+/* ===== hukuki metin sayfaları (gizlilik / koşullar) ===== */
+.legal{max-width:760px;padding-block:clamp(40px,7vw,80px)}
+.legal h1{font-family:var(--display);font-weight:500;font-size:clamp(32px,6vw,52px);letter-spacing:-.02em;line-height:1.05}
+.legal .updated{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:16px 0 8px}
+.legal h2{font-family:var(--display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.01em;margin:36px 0 4px}
+.legal p,.legal li{font-size:16.5px;line-height:1.7}
+.legal p{margin-top:12px}
+.legal ul{margin:12px 0 0 22px}
+.legal li{margin-top:6px}
+.legal a{color:var(--accent);border-bottom:1px solid color-mix(in srgb,var(--accent) 40%,transparent)}
+.legal .legal-nav{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:13px}
+
+/* dile göre farklı bağlantı göster (<html lang> i18n.js tarafından güncellenir; DE → EN metni) */
+html[lang="tr"] .only-en{display:none}
+html:not([lang="tr"]) .only-tr{display:none}
+
 @media(max-width:880px){ .features{grid-template-columns:repeat(2,1fr)} }
 @media(max-width:620px){ .features{grid-template-columns:1fr} .stats{grid-template-columns:repeat(2,1fr)} }
 
 @media(max-width:760px){ .nav-links{display:none} }
+@media(max-width:480px){ .back{display:none} }   /* marka zaten portföye gidiyor; dar ekranda yer aç */
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important}
   .reveal{opacity:1;transform:none;transition:none}
