@@ -17,6 +17,7 @@ ve gizlilik politikası var. Ayrıca özgeçmiş sayfası ve PDF indirme bağlan
 | **Reaction: Brain Training** | 11 mini oyunlu zihin antrenmanı | [reaction.html](reaction.html) | [İndir](https://apps.apple.com/tr/app/reaction-brain-training/id6782079111) |
 | **Bloomendy Merge Pop** | Rahatlatıcı merge bulmaca oyunu | [bloomendy.html](bloomendy.html) | _Çok yakında_ |
 | **Minik Sayfalar: Günlük** (Little Pages: Journal) | Hamilelik ve bebeğin ilk yılı için günlük / anı defteri, PDF kitap | [little_pages.html](little_pages.html) | _Çok yakında_ |
+| **Ders Saati** | YKS (TYT/AYT/YDT) çalışma süresi, seri ve deneme neti takibi; hesapsız, veriler cihazda | [ders_saati/](ders_saati/index.html) | _Çok yakında_ |
 
 ## Yapı
 
@@ -31,14 +32,17 @@ assets/
   Download_on_the_App_Store_Badge_*.svg
 privacy/
   <app>/            → gizlilik / KVKK / kullanım şartları sayfaları
+ders_saati/         → Ders Saati'nin bağımsız mini sitesi: tanıtım, gizlilik, destek
+                      (kendi style.css'i var, ana temayı kullanmaz)
 Cv/                 → özgeçmiş PDF'i
 ```
 
 ## Teknik
 
 - **Tek dosyalık statik site** — `index.html`'i çift tıklayıp tarayıcıda açman yeterli.
-- **Tek tema:** tüm sayfalar `style.css`'i paylaşır; her uygulamanın rengi tek bir
-  `--accent` CSS değişkeniyle belirlenir.
+- **Tek tema:** `ders_saati/` dışındaki tüm sayfalar `style.css`'i paylaşır; her
+  uygulamanın rengi tek bir `--accent` CSS değişkeniyle belirlenir. `ders_saati/`
+  kendi `style.css`'iyle gelir (sistem yazı tipleri, açık/koyu mod).
 - **Fontlar:** Fraunces (başlıklar) + Hanken Grotesk (metin) + Space Mono (etiketler).
 - **iOS landing şablonu:** telefon çerçeveli ekran görüntüleri, özellik kartları,
   resmi App Store badge'i.
