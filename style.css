@@ -117,11 +117,9 @@ footer{text-align:center;font-family:var(--mono);font-size:12px;color:var(--mute
 .phone .island{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:82px;height:24px;background:#000;border-radius:99px;z-index:2}
 
 /* --- görsel gelene kadar placeholder'lar --- */
-.ph-icon{display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:54px;color:#fff;position:relative;
-  background:linear-gradient(150deg,var(--accent),color-mix(in srgb,var(--accent) 42%,#0e0e0e))}
-/* yer tutucunun üstüne biner; dosya yoksa onerror ile kalkar, dosya gelince hiçbir şey değiştirmek gerekmez */
+/* ekran yer tutucusunun üstüne biner; dosya yoksa onerror ile kalkar, dosya gelince hiçbir şey değiştirmek gerekmez */
 .ovl{position:absolute;inset:0;margin:auto}
-.ph-icon > .ovl,.screen > .ovl{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.screen > .ovl{width:100%;height:100%;object-fit:cover;border-radius:inherit}
 .ph-shot{width:100%;height:100%;display:grid;place-items:center;align-content:center;text-align:center;
   background:linear-gradient(160deg,var(--accent),color-mix(in srgb,var(--accent) 34%,#0e0e0e));color:#fff}
 .ph-shot .cam{font-size:30px;opacity:.9}
