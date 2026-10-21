@@ -18,6 +18,7 @@ ve gizlilik politikası var. Ayrıca özgeçmiş sayfası ve PDF indirme bağlan
 | **Bloomendy Merge Pop** | Rahatlatıcı merge bulmaca oyunu | [bloomendy.html](bloomendy.html) | _Çok yakında_ |
 | **Minik Sayfalar: Günlük** (Little Pages: Journal) | Hamilelik ve bebeğin ilk yılı için günlük / anı defteri, PDF kitap | [little_pages.html](little_pages.html) | _Çok yakında_ |
 | **Ders Saati** | YKS (TYT/AYT/YDT) çalışma süresi, seri ve deneme neti takibi; hesapsız, veriler cihazda | [ders_saati/](ders_saati/index.html) | _Çok yakında_ |
+| **Parıltı** | Salon ve bağımsız çalışanlar için randevu, müşteri ve kasa takibi; hazır hatırlatma mesajları | [parilti.html](parilti.html) | _Çok yakında_ |
 
 ## Yapı
 
@@ -31,7 +32,7 @@ assets/
   <app>/            → ikon + ekran görüntüleri
   Download_on_the_App_Store_Badge_*.svg
 privacy/
-  <app>/            → gizlilik / KVKK / kullanım şartları sayfaları
+  <app>/            → gizlilik / KVKK / kullanım şartları / destek sayfaları
 ders_saati/         → Ders Saati'nin bağımsız mini sitesi: tanıtım, gizlilik, destek
                       (kendi style.css'i var, ana temayı kullanmaz)
 Cv/                 → özgeçmiş PDF'i

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Parıltı — appointment, client &amp; cash book for salons | Ekin Atasoy" data-de="Parıltı — Termin-, Kunden- &amp; Kassenbuch für Salons | Ekin Atasoy">Parıltı — salon için randevu, müşteri ve kasa defteri | Ekin Atasoy</title>
+<meta name="description" content="Parıltı: salon ve bağımsız çalışanlar için randevu, müşteri ve kasa takibi. Hazır hatırlatma mesajları, hesap yok, reklam yok, takip yok; veriler yalnızca telefonunda.">
+<meta name="keywords" content="randevu defteri, salon uygulaması, müşteri takibi, kasa defteri, randevu hatırlatma, appointment book, salon app, client manager">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --accent:#a3104f }   /* ahududu: ikon ve ekran görüntülerindeki başlık rengi */
+
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .value{border-top:2px solid var(--accent);padding-top:16px}
+  .value h3{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em;margin-bottom:6px}
+  .value p{font-size:14.5px;color:var(--muted)}
+
+  .trust{background:var(--accent);color:var(--bg);border-radius:26px;padding:clamp(30px,6vw,64px)}
+  .trust .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+  .trust h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,5.5vw,54px);letter-spacing:-.02em;line-height:1.05;margin:12px 0 30px}
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 30px}
+  .trust-grid b{display:block;font-family:var(--display);font-weight:600;font-size:19px;color:#ffc1e0;margin-bottom:4px}
+  .trust-grid span{font-size:15px;line-height:1.55}
+  .trust-links{margin-top:34px;font-family:var(--mono);font-size:12.5px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  .trust-links a{border-bottom:1px solid rgba(251,248,241,.55)}
+
+  .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px 26px}
+  .plan.pro{border-color:var(--accent);box-shadow:0 18px 40px -26px color-mix(in srgb,var(--accent) 60%,transparent)}
+  .plan h3{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:-.01em}
+  .plan .sub{font-family:var(--mono);font-size:12px;color:var(--accent);margin:4px 0 16px}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .plan li{position:relative;padding-left:24px;font-size:15px;color:var(--muted)}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .plan .note{margin-top:18px;font-size:13.5px;color:var(--muted)}
+  .plans-foot{text-align:center;margin:22px auto 0;max-width:62ch;font-size:14.5px;color:var(--muted)}
+
+  .faq details{border-top:1px solid var(--line);padding:18px 4px}
+  .faq details:last-child{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+    font-family:var(--display);font-weight:600;font-size:19px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:var(--mono);color:var(--accent);font-size:24px;line-height:1;transition:transform .2s;flex:none}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{margin-top:12px;color:var(--muted);font-size:15.5px;max-width:64ch}
+
+  .shots-plain img{height:auto}
+
+  @media(max-width:860px){ .trust-grid{grid-template-columns:repeat(2,1fr)} }
+  @media(max-width:700px){ .values,.plans{grid-template-columns:1fr} }
+  @media(max-width:560px){ .trust-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img src="assets/parilti/icon.png" alt="">Parıltı</a>
+    <div class="nav-right">
+      <a href="index.html" class="back" data-en="← Portfolio" data-de="← Portfolio">← Portföy</a>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button data-lang="tr" type="button">TR</button>
+        <button data-lang="en" type="button">EN</button>
+        <button data-lang="de" type="button">DE</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="detail-hero wrap stagger">
+    <img class="app-icon-lg reveal" style="--i:0" src="assets/parilti/icon.png" alt="Parıltı uygulama ikonu">
+    <div class="reveal" style="--i:1"><span class="eyebrow" data-en="iOS App · Salon &amp; Appointment Management" data-de="iOS-App · Salon- &amp; Terminverwaltung">iOS Uygulaması · Salon &amp; Randevu Yönetimi</span></div>
+    <h1 class="tagline reveal" style="--i:2" data-en="Appointments, clients and cash in one place." data-de="Termine, Kunden und Kasse an einem Ort.">Randevu, müşteri ve kasa tek yerde.</h1>
+    <p class="lead reveal" style="--i:3" data-en="Parıltı brings appointments, client records and cash tracking for salons and independent professionals into one app. Client cards, services, appointments and an income-and-expense book live together; before an appointment, a reminder opens ready-made in WhatsApp or SMS and you tap send. No account, no ads, no tracking: your data stays on your phone." data-de="Parıltı vereint Termine, Kundenkarten und Kassenführung für Salons und Selbstständige in einer App. Kundenkarten, Leistungen, Termine und ein Einnahmen-Ausgaben-Buch liegen an einem Ort; vor einem Termin öffnet sich die Erinnerung fertig in WhatsApp oder SMS, und du tippst auf Senden. Kein Konto, keine Werbung, kein Tracking: deine Daten bleiben nur auf deinem Telefon.">Parıltı, salon ve bağımsız çalışan işletmeler için randevu, müşteri ve kasa takibini tek uygulamada toplar. Müşteri kartları, hizmetler, randevular ve gelir-gider defteri bir arada; randevudan önce hatırlatma mesajı hazır halde WhatsApp ya da SMS'te açılır, göndermek için sen dokunursun. Hesap yok, reklam yok, takip yok: verilerin yalnızca telefonunda.</p>
+    <div class="detail-cta reveal" style="--i:4">
+      <!-- DÜZENLE: yayınlanınca <span class="store-badge soon"> → <a href="APP_STORE_LINKI" target="_blank" rel="noopener" class="store-badge"> yap, .soon-note satırlarını sil (hero + sayfa sonu) -->
+      <span class="store-badge soon"><img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store — çok yakında"></span>
+    </div>
+    <div class="soon-note reveal" style="--i:5" data-en="Coming soon on the App Store" data-de="Bald im App Store">Çok yakında App Store'da</div>
+    <div class="privacy-links reveal" style="--i:6">
+      <a class="only-tr" href="privacy/parilti/gizlilik-politikasi.html">Gizlilik Politikası</a>
+      <a class="only-en" href="privacy/parilti/privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz (Englisch)">Privacy Policy</a>
+      <a class="only-tr" href="privacy/parilti/destek.html">Destek</a>
+      <a class="only-en" href="privacy/parilti/support.html" data-en="Support" data-de="Support (Englisch)">Support</a>
+    </div>
+  </section>
+
+  <!-- ===== ÜÇ KISA DEĞER ===== -->
+  <section class="wrap" style="padding-block:20px 10px">
+    <div class="values">
+      <div class="value reveal"><h3 data-en="All in one place" data-de="Alles an einem Ort">Tek yerde</h3><p data-en="Appointments, clients and cash together." data-de="Termine, Kunden und Kasse zusammen.">Randevu, müşteri ve kasa bir arada.</p></div>
+      <div class="value reveal"><h3 data-en="You send the message" data-de="Du sendest die Nachricht">Mesajı sen gönderirsin</h3><p data-en="The text opens ready-made; you tap send." data-de="Der Text öffnet sich fertig; du tippst auf Senden.">Hazır metin açılır; göndermek için sen dokunursun.</p></div>
+      <div class="value reveal"><h3 data-en="Your data stays with you" data-de="Deine Daten bleiben bei dir">Veriler yalnızca sende</h3><p data-en="No account; everything stays on your phone." data-de="Kein Konto; alles bleibt auf deinem Telefon.">Hesap yok; veriler telefonunda.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== EKRANLAR ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="Screens from the app" data-de="Einblicke in die App">Uygulamadan kareler</h2><span class="eyebrow" data-en="Screens" data-de="Screenshots">Ekranlar</span></div>
+    <!-- App Store görselleri kendi cihaz çerçevesini taşır: telefon mockup'ı yerine çerçevesiz .shots-plain -->
+    <div class="shots-plain reveal">
+      <img src="assets/parilti/1.png" alt="Parıltı: Günün cebinde. Bugün ekranında sıradaki randevu, tahmini gelir ve hatırlatılacaklar" width="1320" height="2868" loading="lazy" decoding="async">
+      <img src="assets/parilti/2.png" alt="Parıltı: Randevular hep düzenli. Gün, hafta ve ay görünümlü takvim" width="1320" height="2868" loading="lazy" decoding="async">
+      <img src="assets/parilti/3.png" alt="Parıltı: Randevuların ana ekranda. Ana Ekran widget'ları" width="1320" height="2868" loading="lazy" decoding="async">
+      <img src="assets/parilti/4.png" alt="Parıltı: Müşterini tanı. Müşteri kartı, notlar ve önce/sonra fotoğrafları" width="1320" height="2868" loading="lazy" decoding="async">
+      <img src="assets/parilti/5.png" alt="Parıltı: Kazancını net gör. Kasa özeti, gelir, gider ve net kâr" width="1320" height="2868" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <!-- ===== ÖZELLİKLER ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="What it does" data-de="Was sie kann">Neler yapar?</h2><span class="eyebrow" data-en="Features" data-de="Funktionen">Özellikler</span></div>
+    <div class="features">
+      <div class="feat reveal"><div class="fic">☀️</div><h3 data-en="Today" data-de="Heute">Bugün</h3><p data-en="Your day at a glance: completed appointments, the next appointment, expected income and the clients to remind. Adding an appointment, client or expense takes one tap." data-de="Dein Tag auf einen Blick: abgeschlossene Termine, der nächste Termin, erwartete Einnahmen und die Kunden, die du erinnern solltest. Termin, Kunde oder Ausgabe fügst du mit einem Tipp hinzu.">Günün özeti tek ekranda: tamamlanan randevular, sıradaki randevu, tahmini gelir ve hatırlatılacak müşteriler. Randevu, müşteri ya da gider eklemek tek dokunuş.</p></div>
+      <div class="feat reveal"><div class="fic">📅</div><h3 data-en="Calendar and appointments" data-de="Kalender und Termine">Takvim ve randevular</h3><p data-en="Day, week and month views, with a warning when appointments overlap. Define your services with a name, duration, price and color, then add them to an appointment with a client and time. A completed appointment is recorded as income in the cash book automatically." data-de="Tages-, Wochen- und Monatsansicht, mit Warnung bei Überschneidungen. Lege deine Leistungen mit Name, Dauer, Preis und Farbe an und füge sie einem Termin mit Kunde und Uhrzeit hinzu. Ein abgeschlossener Termin wird automatisch als Einnahme in der Kasse verbucht.">Gün, hafta ve ay görünümü; çakışma olursa uyarır. Hizmetlerini ad, süre, fiyat ve renkle tanımla, müşteri ve zamanla randevuya ekle. Tamamlanan randevu kasaya otomatik gelir olarak işlenir.</p></div>
+      <div class="feat reveal"><div class="fic">👤</div><h3 data-en="Client cards" data-de="Kundenkarten">Müşteri kartları</h3><p data-en="Name, phone, birthday, notes and tags; visit count, total amount and appointment history on one card. Before/after photos are kept with captions; call, message and booking shortcuts sit at the top of the card." data-de="Name, Telefon, Geburtstag, Notizen und Tags; Besuchszahl, Gesamtbetrag und Terminverlauf auf einer Karte. Vorher-/Nachher-Fotos werden mit Bildunterschrift gespeichert; Kurzbefehle zum Anrufen, Schreiben und Terminbuchen oben auf der Karte.">Ad, telefon, doğum günü, notlar ve etiketler; ziyaret sayısı, toplam tutar ve randevu geçmişi tek kartta. Önce/sonra fotoğrafları alt yazılarıyla saklanır; arama, mesaj ve randevu kısayolları kartın üstünde.</p></div>
+      <div class="feat reveal"><div class="fic">💬</div><h3 data-en="Ready-made reminders" data-de="Fertige Erinnerungen">Hazır hatırlatma</h3><p data-en="A notification arrives before the appointment; tap “Remind” and a message filled in with the client's name, date, time and service opens ready in WhatsApp or SMS. Change the text before sending, or edit the templates." data-de="Vor dem Termin erscheint eine Benachrichtigung; tippst du auf „Erinnern“, öffnet sich eine Nachricht mit Name, Datum, Uhrzeit und Leistung des Kunden fertig in WhatsApp oder SMS. Ändere den Text vor dem Senden oder bearbeite die Vorlagen.">Randevudan önce bildirim gelir; “Hatırlat”a dokununca müşterinin adı, tarihi, saati ve hizmetiyle dolu mesaj WhatsApp ya da SMS'te hazır açılır. Göndermeden önce metni değiştirebilir, şablonları düzenleyebilirsin.</p></div>
+      <div class="feat reveal"><div class="fic">💰</div><h3 data-en="Cash book" data-de="Kasse">Kasa</h3><p data-en="Income, expenses and net profit at a glance. Record income and expenses with a category and payment method. This month and last month are visible on the free plan; charts, reports, the full history and a CSV file are in Pro." data-de="Einnahmen, Ausgaben und Nettogewinn auf einen Blick. Erfasse Einnahmen und Ausgaben mit Kategorie und Zahlungsart. Im kostenlosen Plan sind dieser und der letzte Monat sichtbar; Diagramme, Berichte, die gesamte Historie und eine CSV-Datei gibt es mit Pro.">Gelir, gider ve net kâr tek bakışta. Gelir ve giderleri kategori ve ödeme yöntemiyle kaydet. Ücretsiz planda bu ay ve geçen ay görünür; grafik, rapor, tüm geçmiş ve CSV dosyası Pro'da.</p></div>
+      <div class="feat reveal"><div class="fic">🧩</div><h3 data-en="Widgets" data-de="Widgets">Widget'lar</h3><p data-en="See today and the week at a glance: upcoming appointments on the Home Screen and Lock Screen. The small widget is free; the other sizes are in Pro." data-de="Sieh heute und die Woche auf einen Blick: anstehende Termine auf Home- und Sperrbildschirm. Das kleine Widget ist kostenlos, die anderen Größen gibt es mit Pro.">Bugünü ve haftayı bir bakışta gör: yaklaşan randevular Ana Ekran'da ve Kilit Ekranı'nda. Küçük widget ücretsiz, diğer boyutlar Pro'da.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== PRO ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="More with Pro" data-de="Mehr mit Pro">Pro ile daha fazlası</h2><span class="eyebrow">Pro</span></div>
+    <div class="features">
+      <div class="feat reveal"><div class="fic">☁️</div><h3 data-en="iCloud sync" data-de="iCloud-Synchronisierung">iCloud senkronu</h3><p data-en="Clients, appointments, services, staff, cash entries and photos are kept in sync across devices signed in with the same Apple Account. The data lives in your own private iCloud database, which the developer cannot access. It's off by default; you turn it on in Settings." data-de="Kunden, Termine, Leistungen, Mitarbeitende, Kassenbuchungen und Fotos werden zwischen Geräten mit demselben Apple-Account abgeglichen. Die Daten liegen in deiner eigenen privaten iCloud-Datenbank, auf die der Entwickler keinen Zugriff hat. Standardmäßig ist sie aus; du schaltest sie in den Einstellungen ein.">Müşteriler, randevular, hizmetler, çalışanlar, kasa kayıtları ve fotoğraflar, aynı Apple Hesabıyla giriş yaptığın cihazlar arasında eşitlenir. Veriler senin özel iCloud veritabanında durur; geliştirici erişemez. Varsayılan olarak kapalıdır, ayarlardan sen açarsın.</p></div>
+      <div class="feat reveal"><div class="fic">👥</div><h3 data-en="Team and commission" data-de="Team und Provision">Ekip ve prim</h3><p data-en="Add your staff (name, title, phone, commission percentage) and assign them to appointments." data-de="Füge Mitarbeitende hinzu (Name, Titel, Telefon, Provisionssatz) und weise sie Terminen zu.">Çalışanlarını ekle (ad, unvan, telefon, prim yüzdesi) ve randevulara ata.</p></div>
+      <div class="feat reveal"><div class="fic">📊</div><h3 data-en="Reports and export" data-de="Berichte und Export">Raporlar ve dışa aktarma</h3><p data-en="Charts and detailed reports, the full history in the cash book and a CSV file of the selected period." data-de="Diagramme und detaillierte Berichte, die gesamte Historie in der Kasse und eine CSV-Datei des gewählten Zeitraums.">Grafikler ve ayrıntılı raporlar, Kasa'da tüm geçmiş ve seçili dönemin CSV dosyası.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== GİZLİLİK VE GÜVEN ===== -->
+  <section class="sec wrap">
+    <div class="trust reveal">
+      <div class="kicker" data-en="Privacy &amp; trust" data-de="Datenschutz &amp; Vertrauen">Gizlilik ve güven</div>
+      <h2 data-en="Your data stays yours." data-de="Deine Daten gehören nur dir.">Veriler yalnızca sende.</h2>
+      <div class="trust-grid">
+        <div><b data-en="No account." data-de="Kein Konto.">Hesap yok.</b><span data-en="No sign-in, email or password." data-de="Keine Anmeldung, keine E-Mail, kein Passwort.">Giriş yapma, e-posta ya da şifre yok.</span></div>
+        <div><b data-en="No developer server." data-de="Kein Entwickler-Server.">Geliştirici sunucusu yok.</b><span data-en="The app doesn't connect to a server run by the developer; your client data is sent nowhere." data-de="Die App verbindet sich nicht mit einem Server des Entwicklers; deine Kundendaten werden nirgendwohin gesendet.">Uygulama geliştiricinin bir sunucusuna bağlanmaz; müşteri verilerin hiçbir yere gönderilmez.</span></div>
+        <div><b data-en="No tracking or analytics." data-de="Kein Tracking, keine Analyse.">Takip ve analiz yok.</b><span data-en="No advertising, analytics or crash-reporting software; no third-party SDKs." data-de="Keine Werbe-, Analyse- oder Absturzbericht-Software; keine SDKs von Drittanbietern.">Reklam, analiz ya da çökme raporu yazılımı yok; üçüncü taraf SDK kullanılmaz.</span></div>
+        <div><b data-en="Everything on your device." data-de="Alles auf deinem Gerät.">Her şey cihazda.</b><span data-en="Your clients, appointments, cash entries and photos are stored on your phone." data-de="Kunden, Termine, Kassenbuchungen und Fotos werden auf deinem Telefon gespeichert.">Müşterilerin, randevuların, kasa kayıtların ve fotoğrafların telefonunda saklanır.</span></div>
+        <div><b data-en="You send the message." data-de="Du sendest die Nachricht.">Mesajı sen gönderirsin.</b><span data-en="The ready-made text opens in the app on your phone; you tap send." data-de="Der fertige Text öffnet sich in der App auf deinem Telefon; du tippst auf Senden.">Hazır metin telefonundaki uygulamada açılır; göndermek için sen dokunursun.</span></div>
+        <div><b data-en="iCloud is optional." data-de="iCloud ist optional.">iCloud isteğe bağlı.</b><span data-en="If you turn it on, your data lives in your own private iCloud database; the developer cannot access it." data-de="Wenn du es einschaltest, liegen deine Daten in deiner eigenen privaten iCloud-Datenbank; der Entwickler hat keinen Zugriff.">Açarsan veriler senin özel iCloud veritabanında durur; geliştirici erişemez.</span></div>
+      </div>
+      <div class="trust-links">
+        <span data-en="Full texts:" data-de="Volltexte:">Tam metinler:</span>
+        <a class="only-tr" href="privacy/parilti/gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a class="only-en" href="privacy/parilti/privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz (Englisch)">Privacy Policy</a>
+        <a class="only-tr" href="privacy/parilti/destek.html">Destek</a>
+        <a class="only-en" href="privacy/parilti/support.html" data-en="Support" data-de="Support (Englisch)">Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABONELİK ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="Start free, go Pro if you like" data-de="Kostenlos starten, bei Bedarf Pro">Ücretsiz başla, istersen Pro</h2><span class="eyebrow" data-en="Subscription" data-de="Abo">Abonelik</span></div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3 data-en="Free" data-de="Kostenlos">Ücretsiz</h3>
+        <div class="sub" data-en="Always" data-de="Immer">Her zaman</div>
+        <ul>
+          <li data-en="Appointments" data-de="Termine">Randevular</li>
+          <li data-en="Client cards and photos (within plan limits)" data-de="Kundenkarten und Fotos (im Rahmen der Plangrenzen)">Müşteri kartları ve fotoğraflar (plan sınırlarıyla)</li>
+          <li data-en="Services" data-de="Leistungen">Hizmetler</li>
+          <li data-en="Cash book: this month and last month" data-de="Kasse: dieser und letzter Monat">Kasa: bu ay ve geçen ay</li>
+          <li data-en="Reminder notifications and ready-made messages (daily allowance)" data-de="Erinnerungs-Benachrichtigungen und fertige Nachrichten (Tageskontingent)">Hatırlatma bildirimleri ve hazır mesaj (günlük hak)</li>
+          <li data-en="The small widget" data-de="Das kleine Widget">Küçük widget</li>
+        </ul>
+      </div>
+      <div class="plan pro reveal">
+        <h3>Pro</h3>
+        <div class="sub" data-en="Monthly or yearly subscription" data-de="Monatliches oder jährliches Abo">Aylık ya da yıllık abonelik</div>
+        <ul>
+          <li data-en="iCloud sync" data-de="iCloud-Synchronisierung">iCloud senkronu</li>
+          <li data-en="Team and commission" data-de="Team und Provision">Ekip ve prim</li>
+          <li data-en="Charts and reports" data-de="Diagramme und Berichte">Grafik ve raporlar</li>
+          <li data-en="Full cash history" data-de="Gesamte Kassenhistorie">Kasa'da tüm geçmiş</li>
+          <li data-en="CSV export" data-de="CSV-Export">CSV dışa aktarma</li>
+          <li data-en="Other widget sizes" data-de="Weitere Widget-Größen">Diğer widget boyutları</li>
+        </ul>
+        <p class="note" data-en="The price is shown in the App Store for your country. The current list is in the app under Settings → Plan → Go Pro." data-de="Der Preis wird im App Store für dein Land angezeigt. Die aktuelle Liste findest du in der App unter Einstellungen → Plan.">Fiyat ülkene göre App Store'da gösterilir. Güncel liste uygulamada Ayarlar → Plan → Pro'ya Geç ekranındadır.</p>
+      </div>
+    </div>
+    <p class="plans-foot reveal" data-en="Pro is an auto-renewing subscription; you can cancel any time in the App Store. If you cancel, your data is not deleted." data-de="Pro ist ein sich automatisch verlängerndes Abo; du kannst jederzeit im App Store kündigen. Wenn du kündigst, werden deine Daten nicht gelöscht.">Pro, otomatik yenilenen bir aboneliktir; istediğin zaman App Store'dan iptal edebilirsin. İptal edersen verilerin silinmez.</p>
+  </section>
+
+  <!-- ===== SSS ===== -->
+  <section class="sec wrap">
+    <div class="sec-head reveal"><h2 data-en="Frequently asked questions" data-de="Häufige Fragen">Sık sorulanlar</h2><span class="eyebrow" data-en="FAQ" data-de="FAQ">SSS</span></div>
+    <div class="faq reveal">
+      <details><summary data-en="Why do I send the reminder myself?" data-de="Warum sende ich die Erinnerung selbst?">Hatırlatma mesajını neden ben gönderiyorum?</summary><p data-en="The app has no server and doesn't send the message for you. The ready-made message opens in WhatsApp or Messages on your phone, and you tap send. That way it goes out from your own number and you can change the text first." data-de="Die App hat keinen Server und sendet die Nachricht nicht für dich. Die fertige Nachricht öffnet sich in WhatsApp oder Nachrichten auf deinem Telefon, und du tippst auf Senden. So geht sie von deiner eigenen Nummer aus, und du kannst den Text vorher ändern.">Uygulamanın sunucusu yoktur ve mesajı senin yerine göndermez. Hazır mesaj telefonundaki WhatsApp ya da Mesajlar'da açılır; göndermek için sen dokunursun. Böylece mesaj kendi numarandan gider ve göndermeden önce metni değiştirebilirsin.</p></details>
+      <details><summary data-en="Where is my data stored?" data-de="Wo werden meine Daten gespeichert?">Verilerim nerede saklanıyor?</summary><p data-en="Only on your phone. There is no account; the developer doesn't collect, see or share your data. iCloud sync is optional (Pro); if you turn it on, your data lives in your own private iCloud database." data-de="Nur auf deinem Telefon. Es gibt kein Konto; der Entwickler erhebt, sieht und teilt deine Daten nicht. Die iCloud-Synchronisierung ist optional (Pro); wenn du sie einschaltest, liegen deine Daten in deiner eigenen privaten iCloud-Datenbank.">Yalnızca telefonunda. Hesap açılmaz; geliştirici verilerini toplamaz, görmez ve paylaşmaz. iCloud senkronu isteğe bağlıdır (Pro); açarsan veriler senin özel iCloud veritabanında durur.</p></details>
+      <details><summary data-en="Can I move my data to a new phone?" data-de="Kann ich meine Daten auf ein neues Telefon übertragen?">Telefon değiştirirsem verilerimi taşıyabilir miyim?</summary><p data-en="Yes: with iCloud sync (Pro) or with your iPhone's own transfer or backup. The JSON file is a readable copy of your data and can't be restored into the app in this version. The steps are on the support page." data-de="Ja: mit der iCloud-Synchronisierung (Pro) oder mit der Übertragung bzw. Sicherung deines iPhones. Die JSON-Datei ist eine lesbare Kopie deiner Daten und lässt sich in dieser Version nicht in die App zurückspielen. Die Schritte stehen auf der Support-Seite.">Evet: iCloud senkronu (Pro) ile ya da iPhone'un kendi aktarımı ve yedeğiyle. JSON dosyası verilerinin okunabilir bir kopyasıdır; bu sürümde uygulamaya geri yüklenemez. Adımlar destek sayfasında.</p></details>
+      <details><summary data-en="If I cancel, is my data deleted?" data-de="Werden meine Daten gelöscht, wenn ich kündige?">Aboneliği iptal edersem verilerim silinir mi?</summary><p data-en="No. Pro-only features are locked and your data stays on your device; if you go back to Pro your older entries show again. Existing records above the plan limits aren't deleted either; you just can't add new ones." data-de="Nein. Pro-Funktionen werden gesperrt, deine Daten bleiben auf dem Gerät; mit Pro sind ältere Einträge wieder sichtbar. Auch vorhandene Einträge über den Plangrenzen werden nicht gelöscht; du kannst nur keine neuen hinzufügen.">Hayır. Pro'ya özel özellikler kilitlenir, verilerin cihazında kalır; Pro'ya dönünce eski kayıtların yeniden görünür. Plan sınırlarını aşan mevcut kayıtlar da silinmez; yalnızca yenisini ekleyemezsin.</p></details>
+      <details><summary data-en="Which devices?" data-de="Welche Geräte?">Hangi cihazlarda çalışır?</summary><p data-en="iPhone, iOS 26 and later." data-de="iPhone, iOS 26 und neuer.">iPhone, iOS 26 ve üstü.</p></details>
+      <details><summary data-en="Which languages?" data-de="Welche Sprachen?">Hangi diller?</summary><p data-en="Turkish and English." data-de="Türkisch und Englisch.">Türkçe ve İngilizce.</p></details>
+      <details><summary data-en="Who do I contact if something goes wrong?" data-de="An wen wende ich mich bei Problemen?">Sorun yaşarsam kime yazarım?</summary><p data-en="Check the support page or write to studyosefo@gmail.com." data-de="Schau auf der Support-Seite nach oder schreibe an studyosefo@gmail.com.">Destek sayfasına bak ya da studyosefo@gmail.com adresine yaz.</p></details>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-band wrap">
+    <h2 class="reveal" data-en="Manage your appointments in one place." data-de="Verwalte deine Termine an einem Ort.">Randevularını tek yerden yönet.</h2>
+    <div class="reveal" style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <span class="store-badge soon"><img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store — çok yakında"></span>
+      <span class="soon-note" style="margin-top:0" data-en="Coming soon on the App Store" data-de="Bald im App Store">Çok yakında App Store'da</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="privacy-links" style="margin-bottom:14px">
+    <a class="only-tr" href="privacy/parilti/gizlilik-politikasi.html">Gizlilik Politikası</a>
+    <a class="only-en" href="privacy/parilti/privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz (Englisch)">Privacy Policy</a>
+    <a class="only-tr" href="privacy/parilti/destek.html">Destek</a>
+    <a class="only-en" href="privacy/parilti/support.html" data-en="Support" data-de="Support (Englisch)">Support</a>
+  </div>
+  © <span id="yr"></span> <span data-en="Made by Ekin Emre Atasoy" data-de="Entwickelt von Ekin Emre Atasoy">Ekin Emre Atasoy tarafından yapıldı</span> · <a href="index.html" style="color:var(--accent)" data-en="Back to portfolio" data-de="Zum Portfolio">Portföye dön</a>
+</footer>
+<script src="app.js"></script>
+<script src="i18n.js"></script>
+</body>
+</html>
