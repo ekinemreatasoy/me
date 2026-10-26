@@ -44,7 +44,7 @@
   .faq details[open] summary::after{transform:rotate(45deg)}
   .faq details p{margin-top:12px;color:var(--muted);font-size:15.5px;max-width:64ch}
 
-  .detail-hero .phone{margin:44px auto 0}
+  .shots-plain img{height:auto}
 
   @media(max-width:860px){ .trust-grid{grid-template-columns:repeat(2,1fr)} }
   @media(max-width:700px){ .values,.plans{grid-template-columns:1fr} }
@@ -75,17 +75,16 @@
     <h1 class="tagline reveal" style="--i:2" data-en="A page for every day." data-de="Jeden Tag eine Seite.">Her güne bir sayfa.</h1>
     <p class="lead reveal" style="--i:3" data-en="Little Pages is a calm notebook where an expecting or new mother spends one minute a day writing. Pages decorated with photos, voice notes and stickers grow into a calendar, a timeline of special days and, when you want, a printable PDF book. No account, no ads, no tracking: everything stays on your phone." data-de="Little Pages (auf Türkisch „Minik Sayfalar“) ist ein ruhiges Notizbuch, in das werdende und frischgebackene Mütter jeden Tag eine Minute schreiben. Die mit Fotos, Sprachnotizen und Stickern gestalteten Seiten werden mit der Zeit zu einem Kalender, einer Zeitleiste besonderer Tage und – wenn du möchtest – zu einem druckbaren PDF-Buch. Kein Konto, keine Werbung, kein Tracking: alles bleibt nur auf deinem Telefon.">Minik Sayfalar, bir anne adayının ya da yeni annenin her gün bir dakikasını ayırıp yazdığı sakin bir defter. Fotoğraf, sesli not ve çıkartmalarla süslenen sayfalar zamanla takvime, özel günler çizgisine ve istendiğinde basılabilir bir PDF kitaba dönüşür. Hesap yok, reklam yok, takip yok: her şey yalnızca senin telefonunda.</p>
     <div class="detail-cta reveal" style="--i:4">
-      <!-- DÜZENLE: yayınlanınca <span class="store-badge soon"> → <a href="APP_STORE_LINKI" target="_blank" rel="noopener" class="store-badge"> yap, .soon-note satırlarını sil (hero + sayfa sonu) -->
-      <span class="store-badge soon"><img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store — çok yakında"></span>
+      <a href="https://apps.apple.com/app/id6821407384" target="_blank" rel="noopener" class="store-badge">
+        <img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store'dan İndir">
+      </a>
     </div>
-    <div class="soon-note reveal" style="--i:5" data-en="Coming soon on the App Store" data-de="Bald im App Store">Çok yakında App Store'da</div>
-    <div class="privacy-links reveal" style="--i:6">
+    <div class="privacy-links reveal" style="--i:5">
       <a class="only-tr" href="privacy/little_pages/gizlilik-politikasi.html">Gizlilik Politikası</a>
       <a class="only-en" href="privacy/little_pages/privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz (Englisch)">Privacy Policy</a>
       <a class="only-tr" href="privacy/little_pages/kullanim-kosullari.html">Kullanım Koşulları</a>
       <a class="only-en" href="privacy/little_pages/terms-of-use.html" data-en="Terms of Use" data-de="Nutzungsbedingungen (Englisch)">Terms of Use</a>
     </div>
-    <div class="phone reveal" style="--i:7"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/1.png</span></div><img class="ovl" src="assets/little_pages/1.png" alt="Minik Sayfalar — Her gün bir sayfa" onerror="this.remove()"></div></div>
   </section>
 
   <!-- ===== ÜÇ KISA DEĞER ===== -->
@@ -100,14 +99,15 @@
   <!-- ===== EKRANLAR ===== -->
   <section class="sec wrap">
     <div class="sec-head reveal"><h2 data-en="Screens from the app" data-de="Einblicke in die App">Uygulamadan kareler</h2><span class="eyebrow" data-en="Screens" data-de="Screenshots">Ekranlar</span></div>
-    <!-- görseller: assets/little_pages/1.png … 6.png (eklenince yer tutucunun üstüne biner) -->
-    <div class="shots">
-      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/1.png</span></div><img class="ovl" src="assets/little_pages/1.png" alt="Minik Sayfalar — Bugün" onerror="this.remove()"></div></div><figcaption><b data-en="A page every day" data-de="Jeden Tag eine Seite">Her gün bir sayfa</b><span data-en="Today" data-de="Heute">Bugün</span></figcaption></figure>
-      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/2.png</span></div><img class="ovl" src="assets/little_pages/2.png" alt="Minik Sayfalar — Editör" onerror="this.remove()"></div></div><figcaption><b data-en="Decorate your memories" data-de="Gestalte deine Erinnerungen">Anılarını süsle</b><span data-en="Editor" data-de="Editor">Editör</span></figcaption></figure>
-      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/3.png</span></div><img class="ovl" src="assets/little_pages/3.png" alt="Minik Sayfalar — Takvim ve özel günler" onerror="this.remove()"></div></div><figcaption><b data-en="See your special days together" data-de="Alle besonderen Tage auf einen Blick">Özel günlerini bir arada gör</b><span data-en="Calendar &amp; special days" data-de="Kalender &amp; besondere Tage">Takvim ve özel günler</span></figcaption></figure>
-      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/4.png</span></div><img class="ovl" src="assets/little_pages/4.png" alt="Minik Sayfalar — Kitap önizleme" onerror="this.remove()"></div></div><figcaption><b data-en="Let your pages become your own book" data-de="Aus deinen Seiten wird dein eigenes Buch">Sayfaların kendi kitabına dönüşsün</b><span data-en="Book preview" data-de="Buchvorschau">Kitap önizleme</span></figcaption></figure>
-      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/5.png</span></div><img class="ovl" src="assets/little_pages/5.png" alt="Minik Sayfalar — Yazı tipi ve kâğıt" onerror="this.remove()"></div></div><figcaption><b data-en="Your handwriting, your paper" data-de="Deine Handschrift, dein Papier">Senin el yazın, senin kâğıdın</b><span data-en="Handwriting &amp; paper" data-de="Schrift &amp; Papier">Yazı tipi ve kâğıt</span></figcaption></figure>
-      <figure class="shot reveal"><div class="phone"><div class="island"></div><div class="screen"><div class="ph-shot"><div class="cam">📷</div><span>assets/little_pages/6.png</span></div><img class="ovl" src="assets/little_pages/6.png" alt="Minik Sayfalar — Gizlilik" onerror="this.remove()"></div></div><figcaption><b data-en="Your memories stay with you" data-de="Deine Erinnerungen bleiben bei dir">Anıların yalnızca sende</b><span data-en="Privacy" data-de="Datenschutz">Gizlilik</span></figcaption></figure>
+    <!-- App Store görselleri kendi cihaz çerçevesini taşır: telefon mockup'ı yerine çerçevesiz .shots-plain -->
+    <div class="shots-plain reveal">
+      <img src="assets/little_pages/1.png" alt="Minik Sayfalar: Her gün bir sayfa. Bugün ekranında haftanın karşılaştırması, günün sorusu ve son sayfalar" width="1206" height="2622" loading="lazy" decoding="async">
+      <img src="assets/little_pages/2.png" alt="Minik Sayfalar: Anılarını süsle. Ruh hali, fotoğraf, ses, çıkartma ve etiketlerle sayfa düzenleyici" width="1206" height="2622" loading="lazy" decoding="async">
+      <img src="assets/little_pages/3.png" alt="Minik Sayfalar: Özel günlerini bir arada gör. Takvimde özel günler zaman çizelgesi" width="1206" height="2622" loading="lazy" decoding="async">
+      <img src="assets/little_pages/4.png" alt="Minik Sayfalar: Sayfaların kendi kitabına dönüşsün. Kitap önizlemesi, paylaş ve yazdır" width="1206" height="2622" loading="lazy" decoding="async">
+      <img src="assets/little_pages/5.png" alt="Minik Sayfalar: Senin el yazın, senin kâğıdın. El yazısı sayfa stilleri" width="1206" height="2622" loading="lazy" decoding="async">
+      <img src="assets/little_pages/6.png" alt="Minik Sayfalar: Küçük dönüm noktalarını topla. Rozetler ekranı" width="1206" height="2622" loading="lazy" decoding="async">
+      <img src="assets/little_pages/7.png" alt="Minik Sayfalar: Anıların yalnızca sende. Hesap yok, reklam yok" width="1206" height="2622" loading="lazy" decoding="async">
     </div>
   </section>
 
@@ -233,9 +233,10 @@
   <!-- ===== CTA ===== -->
   <section class="cta-band wrap">
     <h2 class="reveal" data-en="Write today's page." data-de="Schreib die heutige Seite.">Bugünkü sayfanı yaz.</h2>
-    <div class="reveal" style="display:flex;flex-direction:column;align-items:center;gap:10px">
-      <span class="store-badge soon"><img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store — çok yakında"></span>
-      <span class="soon-note" style="margin-top:0" data-en="Coming soon on the App Store" data-de="Bald im App Store">Çok yakında App Store'da</span>
+    <div class="reveal" style="display:flex;justify-content:center">
+      <a href="https://apps.apple.com/app/id6821407384" target="_blank" rel="noopener" class="store-badge">
+        <img src="assets/Download_on_the_App_Store_Badge_TR_RGB_blk_100217.svg" alt="App Store'dan İndir">
+      </a>
     </div>
   </section>
 </main>
