@@ -663,6 +663,28 @@ i.h4 { background: var(--h4); }
   margin: 1.75rem 0 0;
 }
 
+/* ---------- Ekran görüntüleri ---------- */
+
+/* App Store görselleri kendi cihaz çerçevesini taşır: çerçevesiz, yatay kaydırılan şerit */
+.ekranlar {
+  display: flex;
+  gap: 1rem;
+  padding: 0.25rem 0.25rem 2rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+.ekranlar img {
+  flex: none;
+  width: clamp(11rem, 58vw, 14.5rem);
+  height: auto;
+  border: 1px solid var(--stroke);
+  border-radius: var(--r-card);
+  box-shadow: var(--shadow);
+  scroll-snap-align: start;
+}
+
 /* ---------- Metin sayfaları (gizlilik, destek) ---------- */
 
 .sayfa-baslik {
@@ -1091,7 +1113,8 @@ code {
   .kisayol,
   .hero-kart,
   .serit,
-  .icindekiler {
+  .icindekiler,
+  .ekranlar {
     display: none;
   }
 
