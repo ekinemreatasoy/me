@@ -16,8 +16,8 @@ ve gizlilik politikası var. Ayrıca özgeçmiş sayfası ve PDF indirme bağlan
 | **GALACTICDEF: TD** | Neon vektör tower defense oyunu | [galacticdef.html](galacticdef.html) | [İndir](https://apps.apple.com/tr/app/galacticdef-td/id6787936194) |
 | **Reaction: Brain Training** | 11 mini oyunlu zihin antrenmanı | [reaction.html](reaction.html) | [İndir](https://apps.apple.com/tr/app/reaction-brain-training/id6782079111) |
 | **Bloomendy Merge Pop** | Rahatlatıcı merge bulmaca oyunu | [bloomendy.html](bloomendy.html) | _Çok yakında_ |
-| **Minik Sayfalar: Günlük** (Little Pages: Journal) | Hamilelik ve bebeğin ilk yılı için günlük / anı defteri, PDF kitap | [little_pages.html](little_pages.html) | _Çok yakında_ |
-| **Ders Saati** | YKS (TYT/AYT/YDT) çalışma süresi, seri ve deneme neti takibi; hesapsız, veriler cihazda | [ders_saati/](ders_saati/index.html) | _Çok yakında_ |
+| **Minik Sayfalar: Günlük** (Little Pages: Journal) | Hamilelik ve bebeğin ilk yılı için günlük / anı defteri, PDF kitap | [little_pages.html](little_pages.html) | [İndir](https://apps.apple.com/app/id6821407384) |
+| **Ders Saati** | YKS (TYT/AYT/YDT) çalışma süresi, seri ve deneme neti takibi; hesapsız, veriler cihazda | [ders_saati/](ders_saati/index.html) | [İndir](https://apps.apple.com/tr/app/ders-saati-yks-%C3%A7al%C4%B1%C5%9Fma-takibi/id6824499346) |
 | **Parıltı** | Salon ve bağımsız çalışanlar için randevu, müşteri ve kasa takibi; hazır hatırlatma mesajları | [parilti.html](parilti.html) | _Çok yakında_ |
 
 ## Yapı
